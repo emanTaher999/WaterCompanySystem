@@ -1,0 +1,32 @@
+﻿@model WaterCompanySystem.Models.Payment_Type
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Delete</h2>
+
+<h3>@WaterCompanySystem.Resourses.Page.Areyousureyouwanttodeletethis?</h3>
+<div>
+    <h4>Payment_Type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.PaymentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@WaterCompanySystem.Resourses.Page.Delete" class="btn btn-default" /> |
+            @Html.ActionLink(@WaterCompanySystem.Resourses.Page.BacktoList, "Index")
+        </div>
+    }
+</div>

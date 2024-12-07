@@ -1,0 +1,431 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\EmanProjects\\WaterCompanySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|f:\\emanprojects\\watercompanysystem\\watercompanysystem\\controllers\\income_transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\income_transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\shared\\_layouteng.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\shared\\_layouteng.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WaterCompanySystem||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\shared\\_layoutarabic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\shared\\_layoutarabic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\models\\income_transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\models\\income_transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\warehouses\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\bottletypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\controllers\\bottletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\bottletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\bottletypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\bottletypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\bottletypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\controllers\\supliertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\supliertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\controllers\\supliertypepricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\supliertypepricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\supliertypeprices\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypeprices\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\supliertypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\supliertypeprices\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypeprices\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\warehouses\\displaystore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\displaystore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\reports\\allstoreinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\reports\\allstoreinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\reports\\storeinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\reports\\storeinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\warehouses\\displayamount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\displayamount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\deliveries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\deliveries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\controllers\\deliveriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\deliveriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|F:\\EmanProjects\\WaterCompanySystem\\watercompanysystem\\views\\custmors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\custmors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 231,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WaterCompanySystem",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\WaterCompanySystem.csproj",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\WaterCompanySystem.csproj",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\WaterCompanySystem.csproj",
+              "RelativeToolTip": "WaterCompanySystem\\WaterCompanySystem.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-12T19:09:57.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LayoutENG.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutENG.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Shared\\_LayoutENG.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutENG.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Shared\\_LayoutENG.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAANYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-12T18:56:10.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Home\\Login.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAADoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-12T18:40:10.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Income_TransactionController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\Income_TransactionController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\Income_TransactionController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\Income_TransactionController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\Income_TransactionController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABUAAACdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T20:07:46.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Web.config",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Web.config",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Web.config",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Web.config",
+              "RelativeToolTip": "WaterCompanySystem\\Web.config",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAwEMAAAAIAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-02T14:42:04.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Income_Transaction.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Models\\Income_Transaction.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Models\\Income_Transaction.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Models\\Income_Transaction.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Models\\Income_Transaction.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABYAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T19:56:54.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutArabic.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAAAMkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T09:31:01.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BottleTypesController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T07:17:50.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:32:51.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:25:02.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:17:21.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:32:58.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:35:51.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:21:58.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SuplierTypePricesController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T16:07:39.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SuplierTypesController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAuwHgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T16:18:32.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:24:10.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:09:05.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AllStoreInfoBySyplierDataReport.rpt",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "RelativeToolTip": "WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKkSURBVDhPbZNdSFNhGMf/55yteXbc96ptyqwMTEq7iIGSxBAv0rwIKgmii\u002BgmBtGFXZQEu\u002Bkmuuqii6CrbkswsiKJLK1l\u002BBFKfuRcYOr8GGPmppvbOe/be46H5cgfPLy8D8/zvM/Xy0GHUiqMTyeqFUEWdFUJ2Y1CvilQFdOvOxByvRjg29Siy\u002BOQIjapzKarSoivrm/GfidutjfXveU4jurqf4yNxfevJjMplkkJhBCqMImv/aGDw9HCm4EfF5m6\u002BDCvn3tCCVVLA1EorJIJfp/b4LJKj959nm7RTfYOwNxYeUxUZ/UkBIpCYDLy8LitPqPAv\u002B7v7zeotv8FoEQX5rxN8vi4PojJ9BR4Aw\u002BJZeFySCiXTEbdHPyZzpFQY\u002BhLlXZjrSHMW2GvKizt\u002BcIielI9CE2GEE3PalmoGe2G7\u002BrwVDTV27uffFjpezW0Vj48k8RKKo1oPoaYMgeP4SAm0uO4/bMT0cwcZFbO7hA8SS4\u002BCNYoN5rrpb7NnEwePl9CuHsQT\u002Bef4Vc2BgIZdIlgaCKCe5/uYjO3pdanu7MAbW0NG23BulGnWHgcPC5lzzc6sRL3YeC9jO7ES/Qu9YJ8VeD97sNl8RryOUV33UFroroYLsmZZQ2iDTVlqD/kgLhwCXS0GXTLiAqDH7daulB3\u002BCT2GYv90yiZgiAIsLBO\u002BxwCjOIBcLPncGS5FXfO3kdj7Wk2ATsEvnTTS8fIasvlCRbWOYhmM6p9Xlw5ehWBYwE47GzDOR4Ksylpon5qsCbixQhBSnazFy1oP2XGCb8VdpsVPM\u002BzjWRjZLIbbZvC4TA/k9yu5DJlUa9TNNdWEmozZWWvjVLRpJpoZkUKsoJEIqglUvwUkUhENFj8biVTEIwWQnLbBnk1s0bBprYXF1oDywDwF\u002BAkOnoHQbuyAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-02T14:54:45.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StoreInfoBySyplierDataReport.rpt",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "RelativeToolTip": "WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKkSURBVDhPbZNdSFNhGMf/55yteXbc96ptyqwMTEq7iIGSxBAv0rwIKgmii\u002BgmBtGFXZQEu\u002Bkmuuqii6CrbkswsiKJLK1l\u002BBFKfuRcYOr8GGPmppvbOe/be46H5cgfPLy8D8/zvM/Xy0GHUiqMTyeqFUEWdFUJ2Y1CvilQFdOvOxByvRjg29Siy\u002BOQIjapzKarSoivrm/GfidutjfXveU4jurqf4yNxfevJjMplkkJhBCqMImv/aGDw9HCm4EfF5m6\u002BDCvn3tCCVVLA1EorJIJfp/b4LJKj959nm7RTfYOwNxYeUxUZ/UkBIpCYDLy8LitPqPAv\u002B7v7zeotv8FoEQX5rxN8vi4PojJ9BR4Aw\u002BJZeFySCiXTEbdHPyZzpFQY\u002BhLlXZjrSHMW2GvKizt\u002BcIielI9CE2GEE3PalmoGe2G7\u002BrwVDTV27uffFjpezW0Vj48k8RKKo1oPoaYMgeP4SAm0uO4/bMT0cwcZFbO7hA8SS4\u002BCNYoN5rrpb7NnEwePl9CuHsQT\u002Bef4Vc2BgIZdIlgaCKCe5/uYjO3pdanu7MAbW0NG23BulGnWHgcPC5lzzc6sRL3YeC9jO7ES/Qu9YJ8VeD97sNl8RryOUV33UFroroYLsmZZQ2iDTVlqD/kgLhwCXS0GXTLiAqDH7daulB3\u002BCT2GYv90yiZgiAIsLBO\u002BxwCjOIBcLPncGS5FXfO3kdj7Wk2ATsEvnTTS8fIasvlCRbWOYhmM6p9Xlw5ehWBYwE47GzDOR4Ksylpon5qsCbixQhBSnazFy1oP2XGCb8VdpsVPM\u002BzjWRjZLIbbZvC4TA/k9yu5DJlUa9TNNdWEmozZWWvjVLRpJpoZkUKsoJEIqglUvwUkUhENFj8biVTEIwWQnLbBnk1s0bBprYXF1oDywDwF\u002BAkOnoHQbuyAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-02T14:00:52.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DisplayStore.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T13:57:14.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "WarehousesController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T06:36:17.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DisplayAmount.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T13:57:05.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DeliveriesController.cs",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T06:34:45.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T06:30:42.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "ToolTip": "F:\\EmanProjects\\WaterCompanySystem\\WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T06:30:37.152Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

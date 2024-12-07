@@ -1,0 +1,97 @@
+﻿legend {
+    display: block;
+    width: auto !important;
+    max-width: 100%;
+    padding: 0;
+    background: #fff !important;
+    margin-bottom: 0.5rem;
+    border-radius: 5px !important;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    /* white-space: normal; */
+}
+.bg-gradient-primary {
+    background-color: #2892d0;
+    background-image: linear-gradient(180deg,#2892d0 10%,#2892d0 100%) !important;
+    background-size: cover !important;
+}
+.btn-facebook {
+    color: #fff;
+    background-color: #2e2868 !important;
+    border-color: #fff;
+}
+.table .thead-dark th {
+    color: #fff;
+    background-color: #2892d0 !important;
+    border-color: #ffffff !important;
+}
+.title-header h2 {
+    color: #2892d0 !important;
+}
+
+ .title-header i {
+        color: #2892d0 !important;
+    }
+#card-details {
+    background-image : src('img/undraw_profile.svg');
+}
+
+@media print {
+     body * {
+         visibility: hidden;
+        
+    }
+
+    #divname, #divname * {
+        visibility: visible;
+    }
+
+    #divname {
+        left: 0px;
+        top: 0px;
+        position: absolute;
+    }
+
+    p {
+        page-break-before: always;
+    }
+
+    .table thead th {
+        vertical-align: middle !important;
+        background-color: #f7f7f7 !important;
+        color: #000 !important;
+    }
+
+    .hidden-area {
+         visibility: hidden;
+        display: none !important;
+    }
+
+
+    .card-header {
+        border: 0px !important;
+        border-bottom: 1px !important;
+    }
+
+    table,
+    .table,
+    .table-hover,
+    .table-sm {
+        border-radius: 0px !important;
+        border: #666 solid 1px !important;
+        box-shadow: 0px 0px 0px #bbb !important;
+    }
+         .thead .tr{
+     color: deepskyblue;
+     border: 0px solid #fff !important;
+    
+}
+
+ tr td {
+     border: #999 solid 1px !important;
+    
+}
+
+
+}

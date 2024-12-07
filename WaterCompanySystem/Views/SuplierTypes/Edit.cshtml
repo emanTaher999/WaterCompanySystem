@@ -1,0 +1,49 @@
+﻿@model WaterCompanySystem.Models.SuplierType
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.SuplierTypes</h2>
+</div>
+<br />
+<br />
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Edit</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model=>model.id)
+
+        <div class="form-horizontal">
+
+            <div class="row my-2">
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.suplier_name)
+                    <div>
+                        @Html.DropDownList("suplier_id", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.suplier_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.SuplierTypes)
+                    <div>
+                        @Html.EditorFor(model => model.suplier_type, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.suplier_type, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div align="center">
+
+                <input type="submit" value="@WaterCompanySystem.Resourses.Page.Create" id="CreateButton" class="btn btn-primary" />
+
+                <a href="/SuplierTypes/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+            </div>
+        </div>
+    }
+</fieldset>

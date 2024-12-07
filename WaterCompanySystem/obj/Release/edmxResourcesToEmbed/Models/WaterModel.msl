@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WaterComponySystemModelStoreContainer" CdmEntityContainer="WaterComponySystemEntities">
+    <EntitySetMapping Name="BottleTypes">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.BottleType">
+        <MappingFragment StoreEntitySet="BottleType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bottle_type" ColumnName="bottle_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Custmors">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Custmor">
+        <MappingFragment StoreEntitySet="Custmor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cusmor_name" ColumnName="cusmor_name" />
+          <ScalarProperty Name="location_cus" ColumnName="location_cus" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="number_of_bottel" ColumnName="number_of_bottel" />
+          <ScalarProperty Name="bottel_type_id" ColumnName="bottel_type_id" />
+          <ScalarProperty Name="creat_at" ColumnName="creat_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deliveries">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Delivery">
+        <MappingFragment StoreEntitySet="Deliveries">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="custmor_id" ColumnName="custmor_id" />
+          <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+          <ScalarProperty Name="num_bottleS_delivered" ColumnName="num_bottleS_delivered" />
+          <ScalarProperty Name="delivery_status_id" ColumnName="delivery_status_id" />
+          <ScalarProperty Name="creat_at" ColumnName="creat_at" />
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryStatus">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.DeliveryStatu">
+        <MappingFragment StoreEntitySet="DeliveryStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="del_status" ColumnName="del_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="position_id" ColumnName="position_id" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="hire_date" ColumnName="hire_date" />
+          <ScalarProperty Name="vacation_days" ColumnName="vacation_days" />
+          <ScalarProperty Name="alwance" ColumnName="alwance" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expense_Transaction">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Expense_Transaction">
+        <MappingFragment StoreEntitySet="Expense_Transaction">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
+          <ScalarProperty Name="transaction_type_id" ColumnName="transaction_type_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="suplier_type_id" ColumnName="suplier_type_id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Income_Transaction">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Income_Transaction">
+        <MappingFragment StoreEntitySet="Income_Transaction">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
+          <ScalarProperty Name="transaction_type_id" ColumnName="transaction_type_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="custmor_id" ColumnName="custmor_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="suplier_type_id" ColumnName="suplier_type_id" />
+          <ScalarProperty Name="payment_type_id" ColumnName="payment_type_id" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_Type">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Payment_Type">
+        <MappingFragment StoreEntitySet="Payment_Type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Pos_type" ColumnName="Pos_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleTables">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.RoleTable">
+        <MappingFragment StoreEntitySet="RoleTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuplierNames">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.SuplierName">
+        <MappingFragment StoreEntitySet="SuplierName">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="suplier_name" ColumnName="suplier_name" />
+          <ScalarProperty Name="location_cus" ColumnName="location_cus" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuplierTypes">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.SuplierType">
+        <MappingFragment StoreEntitySet="SuplierType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="suplier_id" ColumnName="suplier_id" />
+          <ScalarProperty Name="suplier_type" ColumnName="suplier_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuplierTypePrices">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.SuplierTypePrice">
+        <MappingFragment StoreEntitySet="SuplierTypePrice">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="suplier_Type_id" ColumnName="suplier_Type_id" />
+          <ScalarProperty Name="nick" ColumnName="nick" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransactionTypes">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.TransactionType">
+        <MappingFragment StoreEntitySet="TransactionType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Transaction_type" ColumnName="Transaction_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTables">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="WaterComponySystemModel.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouse">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="suplier_type_id" ColumnName="suplier_type_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="last_update" ColumnName="last_update" />
+          <ScalarProperty Name="bottel_type_id" ColumnName="bottel_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

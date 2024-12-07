@@ -1,0 +1,92 @@
+﻿@model WaterCompanySystem.Models.Custmor
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Customer</h2>
+</div>
+<br />
+
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Edit</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model=>model.id)
+        @Html.HiddenFor(model=>model.creat_at)
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row my-2">
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.cusmor_name)
+
+                    <div>
+                        @Html.TextBoxFor(model=>model.cusmor_name, new { @class = "form-control", @id = "cusmor_name" })
+                        @Html.ValidationMessageFor(model => model.cusmor_name)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.location_cus)
+
+                    <div>
+                        @Html.TextBoxFor(model => model.location_cus, new { @class = "form-control", @id = "location_cus" })
+                        @Html.ValidationMessageFor(model => model.location_cus)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.contact_number)
+
+                    <div>
+                        @Html.TextBoxFor(model => model.contact_number, new { @class = "form-control", @id = "contact_number" })
+                        @Html.ValidationMessageFor(model => model.contact_number)
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="row my-2">
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.email)
+
+                    <div>
+                        @Html.TextBoxFor(model => model.email, new { @class = "form-control", @id = "email" })
+                        @Html.ValidationMessageFor(model => model.email)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.bottel_type_id)
+
+                    <div>
+                        @Html.DropDownList("bottel_type_id", null, new { @class = "form-control", @id = "bottel_type_id" })
+
+                        @Html.ValidationMessageFor(model => model.bottel_type_id)
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.number_of_bottel)
+
+                    <div>
+                        @Html.TextBoxFor(model => model.number_of_bottel, new { @class = "form-control", @id = "number_of_bottles" })
+                        @Html.ValidationMessageFor(model => model.number_of_bottel)
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+            <div align="center">
+
+                <input type="submit" value="@WaterCompanySystem.Resourses.Page.Edit" id="CreateButton" class="btn btn-primary" />
+
+                <a href="/Custmors/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+            </div>
+        </div>
+    }
+</fieldset>

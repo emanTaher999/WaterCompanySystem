@@ -1,0 +1,112 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Expense_Transaction>
+
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.ExpenseTransactionRevenues</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index_Revenues", "Expense_Transaction", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Expense_Transaction/Create_Revenues" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.transaction_date)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Transaction_type)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.suplier_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.quantity)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.amount)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.note)
+                </th>
+                <th>
+                    Control
+                </th>
+            </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @*@Html.DisplayFor(modelItem => item.transaction_date)*@
+                        @(item.transaction_date.HasValue ? item.transaction_date.Value.ToString("dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) : "No Date")
+                        @*@(item.transaction_date.HasValue ? item.transaction_date.Value.ToString("dd-MM-yyyy") : "No Date")*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TransactionType.Transaction_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SuplierType.suplier_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note)
+                    </td>
+                    <td>
+                        <a href="/Expense_Transaction/Edit_Revenues/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i>   </a>
+                        |
+                        <a href="/Expense_Transaction/Details_Revenues/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                        |
+                        <a href="/Expense_Transaction/Delete_Revenues/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+
+    </table>
+</div>

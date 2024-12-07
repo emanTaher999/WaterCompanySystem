@@ -1,0 +1,410 @@
+﻿@model WaterCompanySystem.Models.Income_Transaction
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="title-header">
+        <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.IncomeTransaction</h2>
+    </div>
+    <br />
+
+
+    <fieldset class="card p-3 shadow">
+        <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Add</legend>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="row my-2">
+
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.transaction_date)
+                        <div>
+                            @Html.EditorFor(model => model.transaction_date, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+
+                            @*@Html.TextBoxFor(mode => mode.transaction_date, htmlAttributes: new { @class = "form-control", id = "transaction_date", @type = "date" })*@
+                            @Html.ValidationMessageFor(model => model.transaction_date, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.cusmor_name)
+                        <div>
+                            @Html.DropDownList("custmor_id", ViewBag.custmor_id as SelectList, "....... Select .........", htmlAttributes: new { @class = "form-control", id = "custmor_id" })
+                            @Html.ValidationMessageFor(model => model.custmor_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.location_cus)
+                        <div>
+                            @Html.TextBox("CustmorLocation", "", new { @class = "form-control", id = "Custmor_Location", name = "Custmor_Location" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.transaction_type_id)
+                        <div>
+                            @Html.DropDownList("transaction_type_id", ViewBag.transaction_type_id as SelectList, "....... إختر .........", htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.transaction_type_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.nick)
+                        <div>
+                            @Html.DropDownList("suplier_type_id", ViewBag.suplier_type_id_nick as SelectList, "....... Select .........", htmlAttributes: new { @class = "form-control", id = "suplier_type_id", name = "suplier_type_id" })
+                            @*@Html.ValidationMessageFor(model => model.suplier_type_id, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.suplier_type_id_all)
+                        <div>
+                            @Html.TextBox("suplier_type_id_all", "", new { @class = "form-control", id = "suplier_type_id_all", name = "suplier_type_id_all", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.price)
+                        <div>
+                            @Html.TextBox("Price", "", new { @class = "form-control", id = "price", name = "price", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.quantity_in_Store)
+                        <div>
+                            @Html.TextBox("quantity_in_Store", "", new { @class = "form-control", id = "quantity_in_Store", name = "quantity_in_Store", @readonly = "readonly" })
+
+                            @*@Html.EditorFor(model => model.quantity, new { htmlAttributes = new { @class = "form-control", id = "quantity" } })
+                                @Html.ValidationMessageFor(model => model.quantity, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.quantity)
+                        <div>
+                            @Html.EditorFor(model => model.quantity, new { htmlAttributes = new { @class = "form-control", id = "quantity" } })
+                            @Html.ValidationMessageFor(model => model.quantity, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.offer)
+                        <div>
+                            @Html.TextBox("offer", "", new { @class = "form-control", id = "offer", name = "offer", Value = "0" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.TotalAmount)
+                        <div>
+                            @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @class = "form-control", id = "amount" } })
+                            @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.PaymentType)
+                        <div>
+                            @Html.DropDownList("payment_type_id", ViewBag.payment_type_id as SelectList, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.payment_type_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.note)
+                        <div>
+                            @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            
+                <div align="center">
+
+                    <input type="submit" value="Create" id="CreateButton" class="btn btn-primary" />
+
+                    <a href="/Income_Transaction/Index" class="btn btn-facebook">Back to List</a>
+                </div>
+            </div>
+        }
+    </fieldset>
+
+    <script>
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     $(document).ready(function () {
+     // Function to initialize or update the Chart.js chart
+     function initializeChart(price) {
+         var ctx = document.getElementById('myChart');
+
+         if (!ctx) {
+             console.error('Canvas element with id "myChart" not found.');
+             return;
+         }
+
+         ctx = ctx.getContext('2d'); // Get the 2D context
+
+         if (window.myChart instanceof Chart) {
+             window.myChart.destroy(); // Destroy existing chart instance to avoid duplication
+         }
+
+         // Check if price is a valid number
+         if (isNaN(price)) {
+             console.error('Invalid price value:', price);
+             return;
+         }
+
+         window.myChart = new Chart(ctx, {
+             type: 'bar',
+             data: {
+                 labels: ['Price'],
+                 datasets: [{
+                     label: 'Price Value',
+                     data: [price],
+                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                     borderColor: 'rgba(75, 192, 192, 1)',
+                     borderWidth: 1
+                 }]
+             },
+             options: {
+                 scales: {
+                     y: {
+                         beginAtZero: true
+                     }
+                 }
+             }
+         });
+         }
+
+         //GetPriceAndSuplier
+     $('#suplier_type_id').on('change', function () {
+         var suplierTypeId = $(this).val();
+
+         if (suplierTypeId) {
+             $.ajax({
+                 url: '@Url.Action("GetPriceSuplierQuantity", "Income_Transaction")',
+                 type: 'GET',
+                 data: { suplier_type_id: suplierTypeId },
+                 success: function (response) {
+                     if (response.price !== null) {
+                         $('#price').val(response.price);
+                         initializeChart(response.price);
+                         $('#suplier_type_id_all').val(response.suplier_type_id_all);
+                         initializeChart(response.suplier_type_id_all);
+                         $('#quantity_in_Store').val(response.quantity_in_Store);
+                         initializeChart(response.quantity_in_Store);
+                     } else {
+                         $('#price').val('');
+                         alert('Price not found for the selected supplier type.');
+                         $('#suplier_type_id_all').val('');
+                         alert('suplier_type_id_all not found for the selected supplier type.');
+                         $('#quantity_in_Store').val('');
+                         alert('quantity_in_Store not found for the selected supplier type.');
+                     }
+                 },
+                 error: function () {
+                     alert('Error fetching price. Please try again.');
+                 }
+             });
+         } else {
+             $('#price').val('');
+             $('#suplier_type_id_all').val('');
+         }
+     });
+ });
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     $(document).ready(function () {
+    // Function to initialize or update the Chart.js chart
+         function initializeChart(Custmor_Location) {
+        var ctx = document.getElementById('myChart');
+
+        if (!ctx) {
+            console.error('Canvas element with id "myChart" not found.');
+            return;
+        }
+
+        ctx = ctx.getContext('2d'); // Get the 2D context
+
+        if (window.myChart instanceof Chart) {
+            window.myChart.destroy(); // Destroy existing chart instance to avoid duplication
+        }
+
+        // Check if price is a valid number
+        if (isNaN(Custmor_Location)) {
+            console.error('Invalid Custmor_Location value:', Custmor_Location);
+            return;
+        }
+
+        window.myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Custmor_Location'],
+                datasets: [{
+                    label: 'Custmor_Location Value',
+                    data: [Custmor_Location],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+         $('#custmor_id').on('change', function () {
+             var custmor_Id = $(this).val();
+
+             if (custmor_Id) {
+            $.ajax({
+                url: '@Url.Action("GetCustmorLocation", "Income_Transaction")',
+                type: 'GET',
+                data: { custmor_id: custmor_Id },
+                success: function (response) {
+                    if (response.Custmor_Location !== null) {
+                        $('#Custmor_Location').val(response.Custmor_Location);
+                        initializeChart(response.Custmor_Location);
+
+                    } else {
+                        $('#Custmor_Location').val('');
+                        alert('Custmor_Location not found for the selected supplier type.');
+
+                    }
+                },
+                error: function () {
+                    alert('Error fetching price. Please try again.');
+                }
+            });
+             } else
+             {
+                 $('#Custmor_Location').val('');
+        }
+          });
+     });
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     @*$(document).ready(function () {
+// Function to initialize or update the Chart.js chart
+         function initializeChart(amount) {
+    var ctx = document.getElementById('myChart');
+
+    if (!ctx) {
+        console.error('Canvas element with id "myChart" not found.');
+        return;
+    }
+
+    ctx = ctx.getContext('2d'); // Get the 2D context
+
+    if (window.myChart instanceof Chart) {
+        window.myChart.destroy(); // Destroy existing chart instance to avoid duplication
+    }
+
+    // Check if amount is a valid number
+             if (isNaN(amount)) {
+                 console.error('Invalid amount value:', amount);
+        return;
+    }
+
+    window.myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Amount'],
+            datasets: [{
+                label: 'Amount Value',
+                data: [amount],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+         $('#quantity').on('change', function () {
+             debugger
+             var Quantity = $('#quantity').val();
+             var Price = $('#price').val();
+             var Offer = $('#offer').val();
+             if (Quantity) {
+        $.ajax({
+            url: '@Url.Action("GetTotal", "Income_Transaction")',
+            type: 'GET',
+            data: { quantity: Quantity, price:Price,offer:Offer },
+            success: function (response) {
+                if (response.Custmor_Location !== null) {
+                    $('#amount').val(response.amount);
+                    initializeChart(response.amount);
+
+                } else {
+                    $('#amount').val('');
+                    alert('amount not found for the selected supplier type.');
+
+                }
+            },
+            error: function () {
+                alert('Error fetching price. Please try again.');
+            }
+        });
+    } else {
+             $('#amount').val('');
+
+    }
+});
+ });*@
+        ////////////////////////////////////////////////////////////Get Total////////////////////////////////////////////
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to calculate and update the total
+            function updateTotal() {
+
+                var total = 0;
+                // Get the quantity and price values
+                var quantity = parseInt(document.getElementById('quantity').value) || 0;
+                var price = parseFloat(document.getElementById('price').value) || 0;
+                var offer = parseFloat(document.getElementById('offer').value) || 0;
+
+                // Calculate the total
+                total = (quantity * price) - offer;
+
+                // Update the total input field
+                document.getElementById('amount').value = total.toFixed(2); // Display total with 2 decimal places
+            }
+            document.getElementById('quantity').addEventListener('input', updateTotal);
+            document.getElementById('price').addEventListener('input', updateTotal);
+            document.getElementById('offer').addEventListener('input', updateTotal);
+
+        });
+    </script>
+</body>
+</html>

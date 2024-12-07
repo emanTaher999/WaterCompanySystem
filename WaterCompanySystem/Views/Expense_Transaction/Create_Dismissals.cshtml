@@ -1,0 +1,74 @@
+﻿@model WaterCompanySystem.Models.Expense_Transaction
+@{
+    ViewBag.Title = "Create";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="title-header">
+        <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.ExpenseTransactionDismissals</h2>
+    </div>
+    <br />
+    @*<canvas id="myChart"></canvas>*@
+    <fieldset class="card p-4 shadow">
+        <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Add</legend>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.transaction_date)
+                        <div>
+                            @Html.TextBoxFor(model => model.transaction_date, new { @class = "form-control", @type = "Date", @data_val_required = "الرجاء إدخال التاريخ" })
+                            @Html.ValidationMessageFor(model => model.transaction_date, "", new { @class = "text-danger" })
+                            <span class="text-danger" data-valmsg-for="TransactionDate" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.transaction_type_id)
+                        <div>
+                            @Html.DropDownList("transaction_type_id", (SelectList)ViewBag.TransactionTypes,   // Pass the list from ViewBag.TransactionTypes
+                                  "...........إختر.........", htmlAttributes: new { @class = "form-control" ,id= "transaction_type_id", @data_val_required = "الرجاء إختيار نوع المعاملة" })
+                            @Html.ValidationMessageFor(model => model.transaction_type_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.TotalAmount)
+                        <div>
+                            @Html.TextBoxFor(model => model.amount, new { @class = "form-control", @id = "amount", @name = "amount", @data_val_required = "الرجاء إدخال الكمية" })
+                            @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.Label(@WaterCompanySystem.Resourses.Page.note)
+                        <div>
+                            @Html.TextBoxFor(model => model.note, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+               
+                </div>
+                <br />
+                <div align="center">
+                    <input type="submit" value="@WaterCompanySystem.Resourses.Page.Create" id="CreateButton" class="btn btn-primary" />
+                    <a href="/Expense_Transaction/Index_Dismissals" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+                </div>
+            </div>
+        }
+    </fieldset>
+</body>
+</html>

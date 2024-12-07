@@ -1,0 +1,121 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Custmor>
+
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Customer</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index", "Custmors", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Custmors/Create" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+    <a href="/Custmors/CustmorReport" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+
+   
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.cusmor_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.location_cus)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.contact_number)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.email)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.number_of_bottel)
+                </th>
+                @*<th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.creat_at)
+                </th>*@
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.bottle_type)
+                </th>
+                <th>
+                    Control
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cusmor_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_cus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contact_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.number_of_bottel)
+                </td>
+                @*<td>
+                    @(item.creat_at ? item.creat_at.Value.ToString("dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) : "No Date")
+
+                    @Html.DisplayFor(modelItem => item.creat_at)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.BottleType.bottle_type)
+                </td>
+                <td>
+                    <a href="/Custmors/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i></a>
+                    |
+                    <a href="/Custmors/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                    |
+                    <a href="/Custmors/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>

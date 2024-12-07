@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Custmor>
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>Customer</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("ReportParameterAll", "Warehouses", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+
+    <a href="/Warehouses/GetAllStoreReport" target="_blank" class="btn btn-dark justify-content-end">Export Report</a>
+
+    @*<a href="/Custmors/CustmorReport" class="btn btn-dark justify-content-end">Export Report</a>*@
+
+
+    @*<a href="@Url.Action("Export", "Custmors")">Export Report</a>*@
+
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName("cusmor_name")
+                </th>
+                <th>
+                    @Html.DisplayName("location_cus")
+                </th>
+                <th>
+                    @Html.DisplayName("contact_number")
+                </th>
+                <th>
+                    @Html.DisplayName("email")
+                </th>
+                <th>
+                    @Html.DisplayName("number_of_bottel")
+                </th>
+                <th>
+                    @Html.DisplayName("creat_at")
+                </th>
+                <th>
+                    @Html.DisplayName("BottleType.bottle_type")
+                </th>
+                @*<th>
+                        Control
+                    </th>*@
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cusmor_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_cus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contact_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.number_of_bottel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.creat_at)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BottleType.bottle_type)
+                </td>
+                @*<td>
+                        <a href="/Custmors/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i></a>
+                        |
+                        <a href="/Custmors/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                        |
+                        <a href="/Custmors/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                    </td>*@
+            </tr>
+
+        }
+
+    </table>
+</div>

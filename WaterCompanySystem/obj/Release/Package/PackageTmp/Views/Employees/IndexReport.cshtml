@@ -1,0 +1,94 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Employee>
+
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Employees</h2>
+</div>
+<br />
+<br />
+
+@using (Html.BeginForm("IndexReport", "Employees", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <input id="GenerateReportButton" type="button" value="@WaterCompanySystem.Resourses.Page.ExportReport" class="btn btn-primary" />
+
+   // <a href="/Employees/EmpData" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+
+            <tr>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.emp_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.salary)
+                </th>
+                <th>
+
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.hire_date)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.vacation_days)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.alwance)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Pos_type)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.username)
+                </th>
+                @*<th>Control</th>*@
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emp_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.salary)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.hire_date)*@
+                    @(item.hire_date.HasValue ? item.hire_date.Value.ToString("dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) : "No Date")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vacation_days)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alwance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position.Pos_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserTable.username)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        function fetchReport() {
+            
+            window.open('@Url.Action("GetEmpDataReport", "Employees")', '_blank');
+        }
+
+        $("#GenerateReportButton").click(function () {
+            fetchReport();
+        });
+    });
+</script>

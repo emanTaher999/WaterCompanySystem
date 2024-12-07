@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "ReportTest";
+}
+
+<h2>ReportTest</h2>
+
+<script>
+    $(document).ready(function () {
+        debugger
+        $("#btnViewReport").on("click", function () {
+            $("#custmerRpt").attr("src", "CustmorReport").load();
+        });
+    });
+</script>
+
+<h2>Employee Report</h2>
+
+<input type="button" id="btnViewReport" value="Ver Report" class="btn btn-facebook" />
+
+<hr />
+<iframe id="custmerRpt" style="width: 100%; height: 600px;" frameborder="0" scrolling="yes">
+</iframe>
+
+<select id="cm">
+    <option value="">Selection .....</option>
+</select>

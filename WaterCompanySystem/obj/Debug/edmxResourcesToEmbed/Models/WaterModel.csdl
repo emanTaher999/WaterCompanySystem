@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WaterComponySystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BottleType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bottle_type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Custmors" Relationship="Self.FK__Custmor__bottel___3F466844" FromRole="BottleType" ToRole="Custmor" />
+    <NavigationProperty Name="Warehouses" Relationship="Self.FK__Warehouse__botte__5BE2A6F2" FromRole="BottleType" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Custmor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cusmor_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="location_cus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contact_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="number_of_bottel" Type="Int32" />
+    <Property Name="bottel_type_id" Type="Int32" Nullable="false" />
+    <Property Name="creat_at" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="BottleType" Relationship="Self.FK__Custmor__bottel___3F466844" FromRole="Custmor" ToRole="BottleType" />
+    <NavigationProperty Name="Deliveries" Relationship="Self.FK__Deliverie__custm__4D94879B" FromRole="Custmor" ToRole="Deliveries" />
+    <NavigationProperty Name="Income_Transaction" Relationship="Self.FK__Income_Tr__custm__6A30C649" FromRole="Custmor" ToRole="Income_Transaction" />
+  </EntityType>
+  <EntityType Name="Delivery">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="custmor_id" Type="Int32" />
+    <Property Name="delivery_date" Type="DateTime" Precision="3" />
+    <Property Name="num_bottleS_delivered" Type="Int32" />
+    <Property Name="delivery_status_id" Type="Int32" Nullable="false" />
+    <Property Name="creat_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="employee_id" Type="Int32" />
+    <NavigationProperty Name="Custmor" Relationship="Self.FK__Deliverie__custm__4D94879B" FromRole="Deliveries" ToRole="Custmor" />
+    <NavigationProperty Name="DeliveryStatu" Relationship="Self.FK__Deliverie__deliv__4E88ABD4" FromRole="Deliveries" ToRole="DeliveryStatus" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__Deliverie__emplo__4CA06362" FromRole="Deliveries" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="DeliveryStatu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="del_status" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Deliveries" Relationship="Self.FK__Deliverie__deliv__4E88ABD4" FromRole="DeliveryStatus" ToRole="Deliveries" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="position_id" Type="Int32" />
+    <Property Name="salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="hire_date" Type="DateTime" Precision="0" />
+    <Property Name="vacation_days" Type="Int32" />
+    <Property Name="alwance" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Deliveries" Relationship="Self.FK__Deliverie__emplo__4CA06362" FromRole="Employee" ToRole="Deliveries" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Employee__positi__45F365D3" FromRole="Employee" ToRole="Position" />
+    <NavigationProperty Name="UserTable" Relationship="Self.FK__Employee__userid__46E78A0C" FromRole="Employee" ToRole="UserTable" />
+  </EntityType>
+  <EntityType Name="Expense_Transaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transaction_date" Type="DateTime" Precision="3" />
+    <Property Name="transaction_type_id" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="suplier_type_id" Type="Int32" />
+    <Property Name="note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SuplierType" Relationship="Self.FK__Expense_T__supli__60A75C0F" FromRole="Expense_Transaction" ToRole="SuplierType" />
+    <NavigationProperty Name="TransactionType" Relationship="Self.FK__Expense_T__trans__619B8048" FromRole="Expense_Transaction" ToRole="TransactionType" />
+  </EntityType>
+  <EntityType Name="Income_Transaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="transaction_date" Type="DateTime" Precision="3" />
+    <Property Name="transaction_type_id" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="custmor_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="suplier_type_id" Type="Int32" />
+    <Property Name="payment_type_id" Type="Int32" />
+    <Property Name="note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Custmor" Relationship="Self.FK__Income_Tr__custm__6A30C649" FromRole="Income_Transaction" ToRole="Custmor" />
+    <NavigationProperty Name="Payment_Type" Relationship="Self.FK__Income_Tr__payme__68487DD7" FromRole="Income_Transaction" ToRole="Payment_Type" />
+    <NavigationProperty Name="SuplierTypePrice" Relationship="Self.FK__Income_Tr__supli__6754599E" FromRole="Income_Transaction" ToRole="SuplierTypePrice" />
+    <NavigationProperty Name="TransactionType" Relationship="Self.FK__Income_Tr__trans__693CA210" FromRole="Income_Transaction" ToRole="TransactionType" />
+  </EntityType>
+  <EntityType Name="Payment_Type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="payment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Income_Transaction" Relationship="Self.FK__Income_Tr__payme__68487DD7" FromRole="Payment_Type" ToRole="Income_Transaction" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pos_type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__positi__45F365D3" FromRole="Position" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="RoleTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="UserTables" Relationship="Self.FK__UserTable__role___398D8EEE" FromRole="RoleTable" ToRole="UserTable" />
+  </EntityType>
+  <EntityType Name="SuplierName">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="suplier_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="location_cus" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="contact_number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SuplierTypes" Relationship="Self.FK__SuplierTy__supli__5535A963" FromRole="SuplierName" ToRole="SuplierType" />
+  </EntityType>
+  <EntityType Name="SuplierType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="suplier_id" Type="Int32" />
+    <Property Name="suplier_type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Expense_Transaction" Relationship="Self.FK__Expense_T__supli__60A75C0F" FromRole="SuplierType" ToRole="Expense_Transaction" />
+    <NavigationProperty Name="SuplierName" Relationship="Self.FK__SuplierTy__supli__5535A963" FromRole="SuplierType" ToRole="SuplierName" />
+    <NavigationProperty Name="SuplierTypePrices" Relationship="Self.FK__SuplierTy__supli__5812160E" FromRole="SuplierType" ToRole="SuplierTypePrice" />
+    <NavigationProperty Name="Warehouses" Relationship="Self.FK__Warehouse__supli__5CD6CB2B" FromRole="SuplierType" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="SuplierTypePrice">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="suplier_Type_id" Type="Int32" />
+    <Property Name="nick" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Income_Transaction" Relationship="Self.FK__Income_Tr__supli__6754599E" FromRole="SuplierTypePrice" ToRole="Income_Transaction" />
+    <NavigationProperty Name="SuplierType" Relationship="Self.FK__SuplierTy__supli__5812160E" FromRole="SuplierTypePrice" ToRole="SuplierType" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Transaction_type" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Expense_Transaction" Relationship="Self.FK__Expense_T__trans__619B8048" FromRole="TransactionType" ToRole="Expense_Transaction" />
+    <NavigationProperty Name="Income_Transaction" Relationship="Self.FK__Income_Tr__trans__693CA210" FromRole="TransactionType" ToRole="Income_Transaction" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="role_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__userid__46E78A0C" FromRole="UserTable" ToRole="Employee" />
+    <NavigationProperty Name="RoleTable" Relationship="Self.FK__UserTable__role___398D8EEE" FromRole="UserTable" ToRole="RoleTable" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="suplier_type_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="last_update" Type="DateTime" Precision="3" />
+    <Property Name="bottel_type_id" Type="Int32" />
+    <NavigationProperty Name="BottleType" Relationship="Self.FK__Warehouse__botte__5BE2A6F2" FromRole="Warehouse" ToRole="BottleType" />
+    <NavigationProperty Name="SuplierType" Relationship="Self.FK__Warehouse__supli__5CD6CB2B" FromRole="Warehouse" ToRole="SuplierType" />
+  </EntityType>
+  <Association Name="FK__Custmor__bottel___3F466844">
+    <End Role="BottleType" Type="Self.BottleType" Multiplicity="1" />
+    <End Role="Custmor" Type="Self.Custmor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BottleType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Custmor">
+        <PropertyRef Name="bottel_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Warehouse__botte__5BE2A6F2">
+    <End Role="BottleType" Type="Self.BottleType" Multiplicity="0..1" />
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BottleType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="bottel_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Deliverie__custm__4D94879B">
+    <End Role="Custmor" Type="Self.Custmor" Multiplicity="0..1" />
+    <End Role="Deliveries" Type="Self.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Custmor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Deliveries">
+        <PropertyRef Name="custmor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Income_Tr__custm__6A30C649">
+    <End Role="Custmor" Type="Self.Custmor" Multiplicity="1" />
+    <End Role="Income_Transaction" Type="Self.Income_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Custmor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Income_Transaction">
+        <PropertyRef Name="custmor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Deliverie__deliv__4E88ABD4">
+    <End Role="DeliveryStatus" Type="Self.DeliveryStatu" Multiplicity="1" />
+    <End Role="Deliveries" Type="Self.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Deliveries">
+        <PropertyRef Name="delivery_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Deliverie__emplo__4CA06362">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Deliveries" Type="Self.Delivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Deliveries">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__positi__45F365D3">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__userid__46E78A0C">
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense_T__supli__60A75C0F">
+    <End Role="SuplierType" Type="Self.SuplierType" Multiplicity="0..1" />
+    <End Role="Expense_Transaction" Type="Self.Expense_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuplierType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Expense_Transaction">
+        <PropertyRef Name="suplier_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense_T__trans__619B8048">
+    <End Role="TransactionType" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="Expense_Transaction" Type="Self.Expense_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Expense_Transaction">
+        <PropertyRef Name="transaction_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Income_Tr__payme__68487DD7">
+    <End Role="Payment_Type" Type="Self.Payment_Type" Multiplicity="0..1" />
+    <End Role="Income_Transaction" Type="Self.Income_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment_Type">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Income_Transaction">
+        <PropertyRef Name="payment_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Income_Tr__supli__6754599E">
+    <End Role="SuplierTypePrice" Type="Self.SuplierTypePrice" Multiplicity="0..1" />
+    <End Role="Income_Transaction" Type="Self.Income_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuplierTypePrice">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Income_Transaction">
+        <PropertyRef Name="suplier_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Income_Tr__trans__693CA210">
+    <End Role="TransactionType" Type="Self.TransactionType" Multiplicity="1" />
+    <End Role="Income_Transaction" Type="Self.Income_Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Income_Transaction">
+        <PropertyRef Name="transaction_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserTable__role___398D8EEE">
+    <End Role="RoleTable" Type="Self.RoleTable" Multiplicity="1" />
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleTable">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UserTable">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SuplierTy__supli__5535A963">
+    <End Role="SuplierName" Type="Self.SuplierName" Multiplicity="0..1" />
+    <End Role="SuplierType" Type="Self.SuplierType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuplierName">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SuplierType">
+        <PropertyRef Name="suplier_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SuplierTy__supli__5812160E">
+    <End Role="SuplierType" Type="Self.SuplierType" Multiplicity="0..1" />
+    <End Role="SuplierTypePrice" Type="Self.SuplierTypePrice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuplierType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SuplierTypePrice">
+        <PropertyRef Name="suplier_Type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Warehouse__supli__5CD6CB2B">
+    <End Role="SuplierType" Type="Self.SuplierType" Multiplicity="1" />
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuplierType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="suplier_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WaterComponySystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BottleTypes" EntityType="Self.BottleType" />
+    <EntitySet Name="Custmors" EntityType="Self.Custmor" />
+    <EntitySet Name="Deliveries" EntityType="Self.Delivery" />
+    <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatu" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Expense_Transaction" EntityType="Self.Expense_Transaction" />
+    <EntitySet Name="Income_Transaction" EntityType="Self.Income_Transaction" />
+    <EntitySet Name="Payment_Type" EntityType="Self.Payment_Type" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <EntitySet Name="RoleTables" EntityType="Self.RoleTable" />
+    <EntitySet Name="SuplierNames" EntityType="Self.SuplierName" />
+    <EntitySet Name="SuplierTypes" EntityType="Self.SuplierType" />
+    <EntitySet Name="SuplierTypePrices" EntityType="Self.SuplierTypePrice" />
+    <EntitySet Name="TransactionTypes" EntityType="Self.TransactionType" />
+    <EntitySet Name="UserTables" EntityType="Self.UserTable" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouse" />
+    <AssociationSet Name="FK__Custmor__bottel___3F466844" Association="Self.FK__Custmor__bottel___3F466844">
+      <End Role="BottleType" EntitySet="BottleTypes" />
+      <End Role="Custmor" EntitySet="Custmors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Warehouse__botte__5BE2A6F2" Association="Self.FK__Warehouse__botte__5BE2A6F2">
+      <End Role="BottleType" EntitySet="BottleTypes" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Deliverie__custm__4D94879B" Association="Self.FK__Deliverie__custm__4D94879B">
+      <End Role="Custmor" EntitySet="Custmors" />
+      <End Role="Deliveries" EntitySet="Deliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Income_Tr__custm__6A30C649" Association="Self.FK__Income_Tr__custm__6A30C649">
+      <End Role="Custmor" EntitySet="Custmors" />
+      <End Role="Income_Transaction" EntitySet="Income_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Deliverie__deliv__4E88ABD4" Association="Self.FK__Deliverie__deliv__4E88ABD4">
+      <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+      <End Role="Deliveries" EntitySet="Deliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Deliverie__emplo__4CA06362" Association="Self.FK__Deliverie__emplo__4CA06362">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Deliveries" EntitySet="Deliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__positi__45F365D3" Association="Self.FK__Employee__positi__45F365D3">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__userid__46E78A0C" Association="Self.FK__Employee__userid__46E78A0C">
+      <End Role="UserTable" EntitySet="UserTables" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense_T__supli__60A75C0F" Association="Self.FK__Expense_T__supli__60A75C0F">
+      <End Role="SuplierType" EntitySet="SuplierTypes" />
+      <End Role="Expense_Transaction" EntitySet="Expense_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense_T__trans__619B8048" Association="Self.FK__Expense_T__trans__619B8048">
+      <End Role="TransactionType" EntitySet="TransactionTypes" />
+      <End Role="Expense_Transaction" EntitySet="Expense_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Income_Tr__payme__68487DD7" Association="Self.FK__Income_Tr__payme__68487DD7">
+      <End Role="Payment_Type" EntitySet="Payment_Type" />
+      <End Role="Income_Transaction" EntitySet="Income_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Income_Tr__supli__6754599E" Association="Self.FK__Income_Tr__supli__6754599E">
+      <End Role="SuplierTypePrice" EntitySet="SuplierTypePrices" />
+      <End Role="Income_Transaction" EntitySet="Income_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Income_Tr__trans__693CA210" Association="Self.FK__Income_Tr__trans__693CA210">
+      <End Role="TransactionType" EntitySet="TransactionTypes" />
+      <End Role="Income_Transaction" EntitySet="Income_Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserTable__role___398D8EEE" Association="Self.FK__UserTable__role___398D8EEE">
+      <End Role="RoleTable" EntitySet="RoleTables" />
+      <End Role="UserTable" EntitySet="UserTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SuplierTy__supli__5535A963" Association="Self.FK__SuplierTy__supli__5535A963">
+      <End Role="SuplierName" EntitySet="SuplierNames" />
+      <End Role="SuplierType" EntitySet="SuplierTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SuplierTy__supli__5812160E" Association="Self.FK__SuplierTy__supli__5812160E">
+      <End Role="SuplierType" EntitySet="SuplierTypes" />
+      <End Role="SuplierTypePrice" EntitySet="SuplierTypePrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Warehouse__supli__5CD6CB2B" Association="Self.FK__Warehouse__supli__5CD6CB2B">
+      <End Role="SuplierType" EntitySet="SuplierTypes" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

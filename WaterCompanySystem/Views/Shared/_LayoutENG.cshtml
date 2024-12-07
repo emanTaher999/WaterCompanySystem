@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] -  Water Distribution Company System</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    @*<script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>*@
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+
+
+    @*<script src="~/Scripts/chart.min.js"></script>*@
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @*<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+    @*<link rel="stylesheet" href="~/SudaneseExpSYS.styles.css" asp-append-version="true" />*@
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Content/AdminTemplate/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+    <link rel="stylesheet" href="~/Content/AdminTemplate/CairoFont.css" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Content/AdminTemplate/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/Content/AdminTemplate/css/CustomEng.css" rel="stylesheet" />
+    <link href="~/Content/AdminTemplate/custom.css" rel="stylesheet" />
+    @*<script src="~/Content/AdminTemplate/notifyAlert/mk-notifications.min.js"></script>
+        <script src="~/Content/AdminTemplate/notifyAlert/notifyAlert.js"></script>*@
+    <style>
+        /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+        for details on configuring this project to bundle and minify static web assets. */
+
+        a.navbar-brand {
+            white-space: normal;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        a {
+            color: #0077cc;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #1b6ec2;
+            border-color: #1861ac;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: #fff;
+            background-color: #1b6ec2;
+            border-color: #1861ac;
+        }
+
+        .border-top {
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .box-shadow {
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        }
+
+        button.accept-policy {
+            font-size: 1rem;
+            line-height: inherit;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            white-space: nowrap;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion p-0" id="accordionSidebar" style="padding : 0px !important;">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fa fa-hand-holding-water" style="font-size: 2.5rem;color:#f2f2f2"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3" style="font-size: 18px;">
+                    @WaterCompanySystem.Resourses.Page.NAQAACompanWater
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            @*<li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+                </a>
+                </li>*@
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                @WaterCompanySystem.Resourses.Page.Configration
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>@WaterCompanySystem.Resourses.Page.ConfigrationSystem</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @*<h6 class="collapse-header">Custom Components:</h6>*@
+                        <a class="collapse-item" href="/RoleTables/Index">@WaterCompanySystem.Resourses.Page.Roles</a>
+                        <a class="collapse-item" href="/UserTables/Index">@WaterCompanySystem.Resourses.Page.Users</a>
+                        <a class="collapse-item" href="/Positions/Index">@WaterCompanySystem.Resourses.Page.Positions</a>
+                        <a class="collapse-item" href="/BottleTypes/Index">@WaterCompanySystem.Resourses.Page.BottleTypes</a>
+                        <a class="collapse-item" href="/DeliveryStatus/Index">@WaterCompanySystem.Resourses.Page.DeliveryStatus</a>
+                        <a class="collapse-item" href="/TransactionTypes/Index">@WaterCompanySystem.Resourses.Page.TransactionTypes</a>
+                        <a class="collapse-item" href="/Payment_Type/Index">@WaterCompanySystem.Resourses.Page.PaymentType</a>
+                        <a class="collapse-item" href="/SuplierNames/Index">@WaterCompanySystem.Resourses.Page.SuplierNames</a>
+                        <a class="collapse-item" href="/SuplierTypes/Index">@WaterCompanySystem.Resourses.Page.SuplierTypes</a>
+                        <a class="collapse-item" href="/SuplierTypePrices/Index">@WaterCompanySystem.Resourses.Page.SuplierTypePrices</a>
+
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block" />
+            <div class="sidebar-heading">
+                @WaterCompanySystem.Resourses.Page.Requrirments
+            </div>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>@WaterCompanySystem.Resourses.Page.SystemRequrirments</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="/Custmors/Index">@WaterCompanySystem.Resourses.Page.Customer</a>
+                        <a class="collapse-item" href="/Employees/Index">@WaterCompanySystem.Resourses.Page.Employees</a>
+                        <a class="collapse-item" href="/Deliveries/Index">@WaterCompanySystem.Resourses.Page.Deliveries</a>
+                        <a class="collapse-item" href="/Warehouses/Index3">@WaterCompanySystem.Resourses.Page.Warehouses</a>
+                        <a class="collapse-item" href="/Expense_Transaction/Index_Revenues">@WaterCompanySystem.Resourses.Page.ExpenseTransactionRevenues</a>
+                        <a class="collapse-item" href="/Expense_Transaction/Index_Dismissals">@WaterCompanySystem.Resourses.Page.ExpenseTransactionDismissals</a>
+                        <a class="collapse-item" href="/Income_Transaction/Index">@WaterCompanySystem.Resourses.Page.IncomeTransaction</a>
+                        <a class="collapse-item" href="/Warehouses/DisplayStore">@WaterCompanySystem.Resourses.Page.DisplayStore</a>
+                        <a class="collapse-item" href="/Warehouses/DisplayAmount">@WaterCompanySystem.Resourses.Page.DisplayAmount</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                @WaterCompanySystem.Resourses.Page.Reports
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapstgree"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>@WaterCompanySystem.Resourses.Page.CustomReports </span>
+                </a>
+                <div id="collapstgree" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="/Warehouses/GetAllStoreInfoBySyplierDataReport" target="_blank"> @WaterCompanySystem.Resourses.Page.AllSuplierStoreReport </a>
+                        @*<a class="collapse-item" href="/Warehouses/ReportParameter">@WaterCompanySystem.Resourses.Page.AllSuplierStoreReportWithType</a>*@
+                        <a class="collapse-item" href="/Warehouses/GetStoreInfoBySyplierDataReportIndex">@WaterCompanySystem.Resourses.Page.AllSuplierStoreReportWithType</a>
+                        <a class="collapse-item" href="/Warehouses/ReportParameterAmount">@WaterCompanySystem.Resourses.Page.AmountReportDate </a>
+                        <a class="collapse-item" href="/Warehouses/ReportBetweenTotalAmount">@WaterCompanySystem.Resourses.Page.AmountReportTowDate</a>
+                        <a class="collapse-item" href="/Custmors/IndexReport">@WaterCompanySystem.Resourses.Page.AllCustomerReport </a>
+                        <a class="collapse-item" href="/Employees/IndexReport">@WaterCompanySystem.Resourses.Page.AllEmployeeReport </a>
+
+                    </div>
+                </div>
+            </li>
+
+           
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <ul class="navbar-nav">
+                    </ul>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                        <!-- Nav Item - User Information -->
+
+                        <partial name="_LoginPartial" />
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    @RenderBody()
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; @WaterCompanySystem.Resourses.Page.ZadAlamilCompany 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    @*<script src="~/Content/AdminTemplate/vendor/jquery/jquery.min.js"></script>*@
+    <script src="~/Content/AdminTemplate/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    @*<script src="~/Content/AdminTemplate/vendor/jquery-easing/jquery.easing.min.js"></script>*@
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Content/AdminTemplate/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    @*<script src="~/Content/AdminTemplate/vendor/chart.js/Chart.min.js"></script>*@
+
+    <!-- Page level custom scripts -->
+    @*<script src="~/Content/AdminTemplate/js/demo/chart-area-demo.js"></script>
+        <script src="~/Content/AdminTemplate/js/demo/chart-pie-demo.js"></script>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @*@await Component.InvokeAsync("NToastNotify")*@
+    @RenderSection("scripts", required: false)
+    @*@await RenderSectionAsync("Scripts", required: false)*@
+
+
+</body>
+
+</html>
+

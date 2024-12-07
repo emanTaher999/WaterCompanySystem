@@ -1,0 +1,120 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Employee>
+
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت التعديل بنجاح',
+            'success'
+        )
+    </script>
+}@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Employees</h2>
+</div>
+<br />
+<br />
+
+@using (Html.BeginForm("Index", "Employees", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Employees/Create" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+    <a href="/Employees/EmpData" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+
+            <tr>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.emp_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.salary)
+                </th>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.hire_date)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.vacation_days)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.alwance)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Pos_type)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.username)
+                </th>
+                <th>@WaterCompanySystem.Resourses.Page.Control</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emp_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.salary)
+                </td>
+                <td>
+                    @(item.hire_date.HasValue ? item.hire_date.Value.ToString("dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) : "No Date")
+
+                    @*@item.hire_date.Value.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)*@
+
+                    @*@Html.DisplayFor(modelItem => item.hire_date)*@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vacation_days)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alwance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position.Pos_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserTable.username)
+                </td>
+                <td>
+                    <a href="/Employees/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i></a>
+                    |
+                    <a href="/Employees/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                    |
+                    <a href="/Employees/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WaterCompanySystem.ViewModel.AllStoreVM>
+@{
+    ViewBag.Title = "GetAllSuplierStore";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.GetAllSuplierStore</h2>
+</div>
+<br />
+<br />
+
+@using (Html.BeginForm("GetAllSuplierStore", "Warehouses", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+
+    <a href="/Warehouses/GetAllSuplierStore" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.suplier_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.FirstQuantity)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.quantity_in_Store)
+                </th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.suplier_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstQuantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StoreQuantity)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

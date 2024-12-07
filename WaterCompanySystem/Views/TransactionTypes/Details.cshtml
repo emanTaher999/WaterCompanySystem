@@ -1,0 +1,26 @@
+﻿@model WaterCompanySystem.Models.TransactionType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.TransactionTypes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Transaction_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transaction_type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.Edit, "Edit", new { id = Model.id }) |
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.BacktoList, "Index")
+</p>

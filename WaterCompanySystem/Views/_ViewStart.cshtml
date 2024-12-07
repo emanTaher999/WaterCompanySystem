@@ -1,0 +1,18 @@
+﻿@{
+    // Layout = "~/Views/Shared/_LayoutAR.cshtml";
+
+    if (Session["language"] == "en-US")
+    {
+        Layout = "~/Views/Shared/_LayoutENG.cshtml";
+
+    }
+    else if (Session["language"] == "ar-SA")
+    {
+        Layout = "~/Views/Shared/_LayoutArabic.cshtml";
+
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutArabic.cshtml";
+    }
+}

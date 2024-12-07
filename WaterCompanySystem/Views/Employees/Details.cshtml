@@ -1,0 +1,74 @@
+﻿@model WaterCompanySystem.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.emp_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emp_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hire_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hire_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vacation_days)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vacation_days)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.alwance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.alwance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position.Pos_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position.Pos_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserTable.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserTable.username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

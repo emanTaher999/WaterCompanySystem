@@ -1,0 +1,66 @@
+﻿@model WaterCompanySystem.Models.Expense_Transaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.ExpenseTransactionDismissals</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.transaction_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transaction_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.suplier_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuplierType.suplier_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Transaction_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransactionType.Transaction_type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.Edit, "Edit_Dismissals", new { id = Model.id }) |
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.BacktoList, "Index_Dismissals")
+</p>

@@ -1,0 +1,33 @@
+﻿
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@WaterCompanySystem.Resourses.Page.AllEmployeeReport</h3>
+        </div>
+
+    </div>
+  
+    <center>
+        <input id="GenerateReportButton" type="button" value="@WaterCompanySystem.Resourses.Page.ExportReport" class="btn btn-primary" />
+
+    </center>
+}
+
+<script>
+    $(document).ready(function () {
+
+        function fetchReport() {
+
+              window.open('@Url.Action("GetCustmorDataReport", "Custmors")', '_blank');
+        }
+
+        $("#GenerateReportButton").click(function () {
+            fetchReport();
+        });
+    });
+</script>
+

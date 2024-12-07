@@ -1,0 +1,98 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Custmor>
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Customer</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index2", "Custmors", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+
+    <input id="GenerateReportButton" type="button" value="@WaterCompanySystem.Resourses.Page.ExportReport" class="btn btn-primary" />
+
+    @*<a href="/Custmors/CustmorReport" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>*@
+
+    @*<a href="/Custmors/CustmorReport" class="btn btn-dark justify-content-end">Export Report</a>*@
+
+
+    @*<a href="@Url.Action("Export", "Custmors")">Export Report</a>*@
+
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.cusmor_name)
+                </th>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.location_cus)
+                </th>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.contact_number)
+                </th>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.email)
+                </th>
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.number_of_bottel)
+                </th>
+                @*<th>
+                        @Html.DisplayName(WaterCompanySystem.Resourses.Page.creat_at)
+                    </th>*@
+                <th>
+                    @Html.DisplayName(WaterCompanySystem.Resourses.Page.bottle_type)
+                </th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cusmor_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.location_cus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contact_number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.number_of_bottel)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.creat_at)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.BottleType.bottle_type)
+                </td>
+
+            </tr>
+
+        }
+
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        function fetchReport() {
+
+            window.open('@Url.Action("GetCustmorDataReport", "Custmors")', '_blank');
+        }
+
+        $("#GenerateReportButton").click(function () {
+            fetchReport();
+        });
+    });
+</script>

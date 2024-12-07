@@ -1,0 +1,395 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\bottletypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\controllers\\bottletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\bottletypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\bottletypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\bottletypes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\bottletypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\warehouses\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\views\\bottletypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\bottletypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|d:\\zadprojects\\naqaa\\watercompanysystem\\watercompanysystem\\controllers\\supliertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\supliertypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\controllers\\supliertypepricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\supliertypepricescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\supliertypeprices\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypeprices\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\supliertypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\supliertypeprices\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\supliertypeprices\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|WaterCompanySystem||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\warehouses\\displaystore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\displaystore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\reports\\allstoreinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\reports\\allstoreinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\warehousescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\reports\\storeinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\reports\\storeinfobysyplierdatareport.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\warehouses\\displayamount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\warehouses\\displayamount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\shared\\_layoutarabic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\shared\\_layoutarabic.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\deliveries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\deliveries\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\controllers\\deliveriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\controllers\\deliveriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\watercompanysystem\\views\\custmors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D7AA5CD4-FBFD-41E5-AB29-7D7259EB8A7A}|WaterCompanySystem\\WaterCompanySystem.csproj|solutionrelative:watercompanysystem\\views\\custmors\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Details.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:35:51.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:32:58.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Edit.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Edit.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Edit.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAABcAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:21:45.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BottleTypesController.cs",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\BottleTypesController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAIgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T07:17:50.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:32:51.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:25:02.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\BottleTypes\\Delete.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T07:17:21.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypes\\Delete.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:21:58.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SuplierTypePricesController.cs",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\SuplierTypePricesController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T16:07:39.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SuplierTypesController.cs",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\SuplierTypesController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAuwHgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T16:18:32.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypePrices\\Delete.cshtml",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:24:10.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\SuplierTypePrices\\Edit.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T16:09:05.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WaterCompanySystem",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\WaterCompanySystem.csproj",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\WaterCompanySystem.csproj",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\WaterCompanySystem.csproj",
+              "RelativeToolTip": "WaterCompanySystem\\WaterCompanySystem.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-02T08:41:28.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AllStoreInfoBySyplierDataReport.rpt",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "RelativeToolTip": "WaterCompanySystem\\Reports\\AllStoreInfoBySyplierDataReport.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXQSURBVFhH1VZZcBRVFD3T20x3z9KzZZIJxgAGBY1WwK2ECIqUJYJIuZU/Un5axrIorfLbD8FP3L/8UHArPwQDIgSVRUFBSgWFsGiCkECFmAVMMlv3eO/rTkwkMwnhg/L23Hnvdb13z3n3vr734apKsVj0eldPfF57ifzcenbK7Pr6/u5edGdd0htOTZjAVOW7H/8oNn99yPFMlRXJa6cs7CZXi3AopI5TRMgMIBYO\u002BoiELSaVkSsm4CN02jQpty6RoKkhEhYkpIlITJmAC0g7Ht4/O9wjEjL9rhei5oQkpkSAgQWSO3DBRQjon/4MQ0PQIBKkFfHgMIl\u002BMf8/chkE3N1xnL2R6PNQeMLtiH7Ar8JkEuSJYNCPqoowkwgTibxYPEomTcCFJREkBJboj8SfXoo\u002Bve4824fz3Rdx8eIQCjkbqiyhpsri1Qr/jZYJCbjGucM/9\u002BGX4vEAxRzRup6Ix8jtFP8oqWUZsCI6pqWjbO4SmYQHCISOukMkBCC3/JZa9kRHvhNLf1uGDzs\u002BGPGMGxqeS0eUXvLaUjIhAdeoa9ltXON8\u002BjNOBp8OfAbFp6DpSBPWn14Px7ZdUEHEmy8ojy/S3S/8tHnh6h9eaXxu1yONz7Zc6idey8a4ERapT4OcncPWoe2IyzGEpZCYuvr481h/ZgNsmuAM757J8roSIn3y0vTA0/dXN6RSFWugRXsWNO0\u002BNP\u002BZ7W\u002Bc7hoUE5j96BPOO886WWzL7oAs\u002BZBWKxGWXQIsL55cjQ1nKBwEKtaKUJUmIE\u002BvX/L93FlWYPntkdlLGqxKR9L1tm61cc/hHny8/QS6egYQDfnpM9KEwYydRXNmi0iBSSWJCtLW/qM42HvQMwm09G5DSk7jRrOeRkwcMHQNx9u78NF777zsznJFXrpyVebMud5jJ091bXXs/Le3zTLTjTeFam1JR9tfKo6cuoDPd7fhYGsX8shgb3QLcvTE5SgSShwpIvBr32Hs7dnnmXRlRx\u002BTqMQcQcIn8sJ4BEQ5fvP9r7jVSCOkVbXTEouqKqx1x89J2HRgEB3nB\u002BFk\u002BuGvOYHQPV8iZsYQ95T7bZ1teG3rOhQ5zRRou6IFZqVvwOYHW6CqCiqTEWz\u002B5jCW33vzmCvAmAER4a/CT5qon137Z9LS0X4\u002Bj40HCjjZkUGWSAxEt8FZsAlGzBjRU3vbcaz5GDBEKwfJ5ZkiZsTr8Pqqd1GdSiMUDKKmOjYugTGfYdNTix1SNnPW1P2IUyK5JiZjWYNCOV2Hpoehd98HZd9DLvVhU7RbAT70L/irj78FTdaRz9t0CEsngnHzAJEoKIqMSMgQVa0m4cMtNRLl\u002BADkgAWlczHslgcInx4fsWACBDwaPGREoOsB6AENkq90uimbiDRVpsPjF8VlXi0wUFAgq\u002BQJIwapfSFy\u002BxtcLxABAR6rw1oBHqZCpNOdIIhAwE8Exnh9jJQlwLuTFd65CqqqsEz6piUFkt\u002BEasSR27USQwdmCwIzrDqsIfAwgZuGIcD1QACSJMEukwfKEmCRaIsyVTMmo6sUS3anrEHRQ9BDcQxufBQPG09i7RNvI0xnZAw4rRFJ8EoIcBbja9dQjspsH/UlGT4ioFNootEQkskoVtQ\u002BhqQVp9NujoD7iKjI3LS\u002BDP7EBGzbQa5gY2drnsIhQ1E1hOmikbL8SNOXMb8\u002BKkCjVpjaEIWLYk5uFxWRH68elJKyBJh9NlfA/hND2PO7SruOIGEFMbNKQ22KtELBinl\u002BaJoGwzQRoE9XkmW3DtBabkeKWAkpSYANZLIFfPEL5f6jdKVKVGPOtWHcOlPF9WkF05MSVswFgkpOhEjmk16kmHs7FvcG0VL5KhOCMd\u002BHlwk1JBvuMLTizn7bQiYvgTyOUIAumyoBqlkkjBzlBpkKlB8qhUXkgknIZFKxTE3wrrnXNRLpZq5gPIF3wiCapojM1ts/iJ4Lg\u002BJ8XK5MphZwUTJIdVK\u002BRA7PYbQsKV8UOPHalDHLOPd/IcA/IO7txaB4mvAAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T14:54:45.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Web.config",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Web.config",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Web.config",
+              "RelativeToolTip": "WaterCompanySystem\\Web.config",
+              "ViewState": "AgIAADcAAAAAAAAAAAAlwEMAAAABAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-02T14:42:04.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StoreInfoBySyplierDataReport.rpt",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "RelativeToolTip": "WaterCompanySystem\\Reports\\StoreInfoBySyplierDataReport.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXQSURBVFhH1VZZcBRVFD3T20x3z9KzZZIJxgAGBY1WwK2ECIqUJYJIuZU/Un5axrIorfLbD8FP3L/8UHArPwQDIgSVRUFBSgWFsGiCkECFmAVMMlv3eO/rTkwkMwnhg/L23Hnvdb13z3n3vr734apKsVj0eldPfF57ifzcenbK7Pr6/u5edGdd0htOTZjAVOW7H/8oNn99yPFMlRXJa6cs7CZXi3AopI5TRMgMIBYO\u002BoiELSaVkSsm4CN02jQpty6RoKkhEhYkpIlITJmAC0g7Ht4/O9wjEjL9rhei5oQkpkSAgQWSO3DBRQjon/4MQ0PQIBKkFfHgMIl\u002BMf8/chkE3N1xnL2R6PNQeMLtiH7Ar8JkEuSJYNCPqoowkwgTibxYPEomTcCFJREkBJboj8SfXoo\u002Bve4824fz3Rdx8eIQCjkbqiyhpsri1Qr/jZYJCbjGucM/9\u002BGX4vEAxRzRup6Ix8jtFP8oqWUZsCI6pqWjbO4SmYQHCISOukMkBCC3/JZa9kRHvhNLf1uGDzs\u002BGPGMGxqeS0eUXvLaUjIhAdeoa9ltXON8\u002BjNOBp8OfAbFp6DpSBPWn14Px7ZdUEHEmy8ojy/S3S/8tHnh6h9eaXxu1yONz7Zc6idey8a4ERapT4OcncPWoe2IyzGEpZCYuvr481h/ZgNsmuAM757J8roSIn3y0vTA0/dXN6RSFWugRXsWNO0\u002BNP\u002BZ7W\u002Bc7hoUE5j96BPOO886WWzL7oAs\u002BZBWKxGWXQIsL55cjQ1nKBwEKtaKUJUmIE\u002BvX/L93FlWYPntkdlLGqxKR9L1tm61cc/hHny8/QS6egYQDfnpM9KEwYydRXNmi0iBSSWJCtLW/qM42HvQMwm09G5DSk7jRrOeRkwcMHQNx9u78NF777zsznJFXrpyVebMud5jJ091bXXs/Le3zTLTjTeFam1JR9tfKo6cuoDPd7fhYGsX8shgb3QLcvTE5SgSShwpIvBr32Hs7dnnmXRlRx\u002BTqMQcQcIn8sJ4BEQ5fvP9r7jVSCOkVbXTEouqKqx1x89J2HRgEB3nB\u002BFk\u002BuGvOYHQPV8iZsYQ95T7bZ1teG3rOhQ5zRRou6IFZqVvwOYHW6CqCiqTEWz\u002B5jCW33vzmCvAmAER4a/CT5qon137Z9LS0X4\u002Bj40HCjjZkUGWSAxEt8FZsAlGzBjRU3vbcaz5GDBEKwfJ5ZkiZsTr8Pqqd1GdSiMUDKKmOjYugTGfYdNTix1SNnPW1P2IUyK5JiZjWYNCOV2Hpoehd98HZd9DLvVhU7RbAT70L/irj78FTdaRz9t0CEsngnHzAJEoKIqMSMgQVa0m4cMtNRLl\u002BADkgAWlczHslgcInx4fsWACBDwaPGREoOsB6AENkq90uimbiDRVpsPjF8VlXi0wUFAgq\u002BQJIwapfSFy\u002BxtcLxABAR6rw1oBHqZCpNOdIIhAwE8Exnh9jJQlwLuTFd65CqqqsEz6piUFkt\u002BEasSR27USQwdmCwIzrDqsIfAwgZuGIcD1QACSJMEukwfKEmCRaIsyVTMmo6sUS3anrEHRQ9BDcQxufBQPG09i7RNvI0xnZAw4rRFJ8EoIcBbja9dQjspsH/UlGT4ioFNootEQkskoVtQ\u002BhqQVp9NujoD7iKjI3LS\u002BDP7EBGzbQa5gY2drnsIhQ1E1hOmikbL8SNOXMb8\u002BKkCjVpjaEIWLYk5uFxWRH68elJKyBJh9NlfA/hND2PO7SruOIGEFMbNKQ22KtELBinl\u002BaJoGwzQRoE9XkmW3DtBabkeKWAkpSYANZLIFfPEL5f6jdKVKVGPOtWHcOlPF9WkF05MSVswFgkpOhEjmk16kmHs7FvcG0VL5KhOCMd\u002BHlwk1JBvuMLTizn7bQiYvgTyOUIAumyoBqlkkjBzlBpkKlB8qhUXkgknIZFKxTE3wrrnXNRLpZq5gPIF3wiCapojM1ts/iJ4Lg\u002BJ8XK5MphZwUTJIdVK\u002BRA7PYbQsKV8UOPHalDHLOPd/IcA/IO7txaB4mvAAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-10-02T14:00:52.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DisplayStore.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\DisplayStore.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T13:57:14.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WarehousesController.cs",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\WarehousesController.cs",
+              "ViewState": "AgIAAF4CAAAAAAAAAAAcwGsCAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T06:36:17.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DisplayAmount.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Warehouses\\DisplayAmount.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T13:57:05.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_LayoutArabic.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Shared\\_LayoutArabic.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T09:31:01.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DeliveriesController.cs",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "RelativeToolTip": "WaterCompanySystem\\Controllers\\DeliveriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T06:34:45.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Deliveries\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T06:30:42.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "RelativeDocumentMoniker": "WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "ToolTip": "D:\\ZadProjects\\NAQAA\\WaterCompanySystem\\WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "RelativeToolTip": "WaterCompanySystem\\Views\\Custmors\\Create.cshtml",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T06:30:37.152Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

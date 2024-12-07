@@ -1,0 +1,49 @@
+﻿
+@model WaterCompanySystem.Models.Warehouse
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Warehouses</h2>
+</div>
+<br />
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow px-3">@WaterCompanySystem.Resourses.Page.Delete</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.id)
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row my-2">
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.suplier_type_id)
+                    <div>
+                        @Html.DropDownList("suplier_type_id", null, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.bottel_type_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.quantity)
+                    <div>
+                        @Html.EditorFor(model => model.quantity, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.quantity, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div align="center">
+
+                <input type="submit" value="@WaterCompanySystem.Resourses.Page.Delete" id="CreateButton" class="btn btn-danger" />
+
+                <a href="/Warehouses/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+            </div>
+        </div>
+    }
+</fieldset>

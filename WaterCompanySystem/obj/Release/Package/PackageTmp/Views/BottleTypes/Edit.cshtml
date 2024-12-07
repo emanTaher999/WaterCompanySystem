@@ -1,0 +1,40 @@
+﻿@model WaterCompanySystem.Models.BottleType
+
+@{
+    ViewBag.Title = "Edit";
+}
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.BottleTypes</h2>
+</div>
+<br />
+<br />
+<h2>@WaterCompanySystem.Resourses.Page.Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id)
+
+        <div class="col-my-2">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.bottle_type)
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.bottle_type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.bottle_type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div align="center">
+
+            <input type="submit" value="@WaterCompanySystem.Resourses.Page.Edit" id="CreateButton" class="btn btn-primary" />
+
+            <a href="/BottleTypes/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+        </div>
+
+    </div>
+}

@@ -1,0 +1,313 @@
+﻿@model WaterCompanySystem.Models.Income_Transaction
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="title-header">
+        <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>Income Transaction - تعديل الصادر - البضائع</h2>
+    </div>
+    <br />
+
+
+    <fieldset class="card p-3 shadow">
+        <legend class="bg-custom shadow  px-3">Delete</legend>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.HiddenFor(model => model.id)
+                @Html.HiddenFor(model => model.transaction_date)
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="row my-2">
+
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.custmor_id, "custmor_id")
+                        <div>
+                            @Html.DropDownList("custmor_id", null, htmlAttributes: new { @class = "form-control", id = "custmor_id", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.custmor_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label("Number_of_bottel")
+                        <div>
+                            @Html.TextBox("bottles", "", new { @class = "form-control", id = "number_of_bottel", name = "bottles", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.transaction_type_id, "transaction_type_id")
+                        <div>
+                            @Html.DropDownList("transaction_type_id", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.transaction_type_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label("nick")
+                        <div>
+                            @Html.DropDownList("suplier_type_id", null, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            @*@Html.ValidationMessageFor(model => model.suplier_type_id, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.Label("Suplier_type_id")
+                        <div>
+                            @Html.TextBox("suplier_type_id_all", "", new { @class = "form-control", id = "suplier_type_id_all", name = "suplier_type_id_all", @readonly = "readonly" })
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label("Price")
+                        <div>
+
+                            @Html.TextBox("Price", "", new { @class = "form-control", id = "price", name = "price", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label("quantity_in_Store")
+                        <div>
+                            @Html.TextBox("quantity_in_Store", "", new { @class = "form-control", id = "quantity_in_Store", name = "quantity_in_Store", @readonly = "readonly" })
+
+                            @*@Html.EditorFor(model => model.quantity, new { htmlAttributes = new { @class = "form-control", id = "quantity" } })
+                                @Html.ValidationMessageFor(model => model.quantity, "", new { @class = "text-danger" })*@
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.quantity)
+                        <div>
+                            @Html.EditorFor(model => model.quantity, new { htmlAttributes = new { @class = "form-control", id = "quantity", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.quantity, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-md-3">
+                        @Html.Label("offer")
+                        <div>
+                            @Html.TextBox("offer", "", new { @class = "form-control", id = "offer", name = "offer", Value = "0", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.Label("TotalAmount")
+                        <div>
+                            @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @class = "form-control", id = "amount", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.amount, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.payment_type_id, "payment_type_id")
+                        <div>
+                            @Html.DropDownList("payment_type_id", ViewBag.payment_type_id as SelectList, htmlAttributes: new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(model => model.payment_type_id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.LabelFor(model => model.note)
+                        <div>
+                            @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div align="center">
+
+                    <input type="submit" value="Delete" id="CreateButton" class="btn btn-danger" />
+
+                    <a href="/Income_Transaction/Index" class="btn btn-facebook">Back to List</a>
+                </div>
+            </div>
+        }
+    </fieldset>
+
+    <script>
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+   $(document).ready(function () {
+    // Function to initialize or update the Chart.js chart
+    function initializeChart(value) {
+        var ctx = document.getElementById('myChart');
+
+        if (!ctx) {
+            console.error('Canvas element with id "myChart" not found.');
+            return;
+        }
+
+        ctx = ctx.getContext('2d'); // Get the 2D context
+
+        if (window.myChart instanceof Chart) {
+            window.myChart.destroy(); // Destroy existing chart instance to avoid duplication
+        }
+
+        // Check if value is a valid number
+        if (isNaN(value)) {
+            console.error('Invalid chart value:', value);
+            return;
+        }
+
+        window.myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Value'],
+                datasets: [{
+                    label: 'Chart Value',
+                    data: [value],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    // Function to load supplier data
+    function loadSupplierData() {
+        var suplierTypeId = $('#suplier_type_id').val();  // Get the selected supplier type ID
+
+        if (suplierTypeId) {
+            $.ajax({
+                url: '@Url.Action("GetPriceSuplierQuantity", "Income_Transaction")',
+                type: 'GET',
+                data: { suplier_type_id: suplierTypeId },  // Send the selected supplier type ID to the server
+                success: function (response) {
+                    if (response.price !== null) {
+                        // Update form fields with the fetched data
+                        $('#price').val(response.price);
+                        initializeChart(response.price);  // Update chart with price
+
+                        $('#suplier_type_id_all').val(response.suplier_type_id_all);
+                        $('#quantity_in_Store').val(response.quantity_in_Store);
+
+                        // Optionally, initialize charts for other values if needed
+                    } else {
+                        // Reset the form fields and show alerts if no data found
+                        $('#price').val('');
+                        $('#suplier_type_id_all').val('');
+                        $('#quantity_in_Store').val('');
+                        alert('Data not found for the selected supplier type.');
+                    }
+                },
+                error: function () {
+                    // Handle errors
+                    alert('Error fetching supplier data. Please try again.');
+                }
+            });
+        } else {
+            // Reset the form fields if no supplier type is selected
+            $('#price').val('');
+            $('#suplier_type_id_all').val('');
+            $('#quantity_in_Store').val('');
+        }
+    }
+
+    // Trigger data loading when the form is loaded
+    loadSupplierData();  // Load supplier data on form load (for edit form)
+
+    // Optionally, trigger data loading when the supplier type is changed
+    $('#suplier_type_id').on('change', function () {
+        loadSupplierData();  // Reload supplier data when the dropdown value changes
+    });
+
+    // Function to fetch customer data
+    function CustmorData() {
+        var custmor_Id = $('#custmor_id').val();  // Corrected to fetch the supplier/customer ID
+
+        if (custmor_Id) {
+            $.ajax({
+                url: '@Url.Action("GetBottel", "Income_Transaction")',
+                type: 'GET',
+                data: { custmor_id: custmor_Id },  // Pass the customer ID to the server
+                success: function (response) {
+                    if (response.number_of_bottel !== null) {
+                        // Set the number of bottles and initialize the chart with the response data
+                        $('#number_of_bottel').val(response.number_of_bottel);
+                        initializeChart(response.number_of_bottel);  // Update the chart with the new data
+                    } else {
+                        // Clear the input if no data is found and show an alert
+                        $('#number_of_bottel').val('');
+                        alert('Number of bottles not found for the selected customer.');
+                    }
+                },
+                error: function () {
+                    // Handle error scenarios
+                    alert('Error fetching data. Please try again.');
+                }
+            });
+        } else {
+            // Clear the input if no customer is selected
+            $('#number_of_bottel').val('');
+        }
+    }
+
+    // Trigger the `CustmorData` function on form load (for edit forms)
+    CustmorData();
+
+    // Optionally, trigger data loading when the customer type is changed
+    $('#custmor_id').on('change', function () {
+        CustmorData();  // Reload customer data when the dropdown value changes
+    });
+
+       ////////////////////////////////////////////////////////////Get Total////////////////////////////////////////////
+
+
+});
+
+ 
+
+
+
+    ////////////////////////////////////////////////////////////Get Total////////////////////////////////////////////
+        //document.addEventListener('DOMContentLoaded', function () {
+        //    // Function to calculate and update the total
+        //    function updateTotal() {
+
+        //        var total = 0;
+        //        // Get the quantity and price values
+        //        var quantity = parseInt(document.getElementById('quantity').value) || 0;
+        //        var price = parseFloat(document.getElementById('price').value) || 0;
+        //        var offer = parseFloat(document.getElementById('offer').value) || 0;
+
+        //        // Calculate the total
+        //        total = (quantity * price) - offer;
+
+        //        // Update the total input field
+        //        document.getElementById('amount').value = total.toFixed(2); // Display total with 2 decimal places
+        //    }
+        //    document.getElementById('quantity').addEventListener('input', updateTotal);
+        //    document.getElementById('price').addEventListener('input', updateTotal);
+        //    document.getElementById('offer').addEventListener('input', updateTotal);
+
+        //});
+    </script>
+</body>
+</html>
+
+

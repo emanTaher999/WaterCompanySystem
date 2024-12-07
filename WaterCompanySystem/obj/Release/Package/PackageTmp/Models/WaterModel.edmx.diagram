@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64efd89b2a814bbb8fad830befaf281d" Name="Diagram1">
+        <EntityTypeShape EntityType="WaterComponySystemModel.BottleType" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Custmor" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Delivery" Width="1.5" PointX="16.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.DeliveryStatu" Width="1.5" PointX="14.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Employee" Width="1.5" PointX="14.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Expense_Transaction" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Income_Transaction" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Payment_Type" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Position" Width="1.5" PointX="12" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.RoleTable" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.SuplierName" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.SuplierType" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.SuplierTypePrice" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.TransactionType" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.UserTable" Width="1.5" PointX="12" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WaterComponySystemModel.Warehouse" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Custmor__bottel___3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Warehouse__botte__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Deliverie__custm__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Income_Tr__custm__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Deliverie__deliv__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Deliverie__emplo__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Employee__positi__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Employee__userid__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Expense_T__supli__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Expense_T__trans__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Income_Tr__payme__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Income_Tr__supli__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Income_Tr__trans__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__UserTable__role___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__SuplierTy__supli__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__SuplierTy__supli__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="WaterComponySystemModel.FK__Warehouse__supli__5CD6CB2B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

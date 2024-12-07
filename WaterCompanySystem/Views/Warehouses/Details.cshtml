@@ -1,0 +1,42 @@
+﻿@model WaterCompanySystem.Models.Warehouse
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.Warehouses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.@WaterCompanySystem.Resourses.Page.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.@WaterCompanySystem.Resourses.Page.last_update)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_update)
+        </dd>
+
+        <dt>
+            @Html.@WaterCompanySystem.Resourses.Page.bottle_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BottleType.bottle_type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

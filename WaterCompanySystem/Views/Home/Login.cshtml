@@ -1,0 +1,95 @@
+﻿@model WaterCompanySystem.ViewModel.LoginVM
+@{
+    // var lan = "";
+    Layout = null;
+    // ViewData["languge"] = lan;
+    var x = TempData["msg"];
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Login NAQAA System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/login-form/css/style.css">
+
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="wrap d-md-flex">
+                        <div class="img" style="background-image: url(/Content/AdminTemplate/img/bg.jpg);">
+                        </div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div>
+                                <div class="w-100">
+                                    <h1 class="mb-4" style="text-align: center">Sign In</h1>
+                                </div>
+
+                            </div>
+
+                            @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "my_form" }))
+                            {
+                                @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                                if (x != null)
+                                {
+                                   <label class="text-danger" style="font-weight:bolder;">@x @ViewBag.msg</label>
+                                }
+
+                                <div class="form-group mb-3">
+                                    <label class="label" for="userName">Username</label>
+                                    @Html.TextBox("userName", "", new { @class = "form-control", @id = "userName",@Value= "Admin", @data_val_required = "الرجاء إدخال اسم المستخدم" })
+                                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                                    <span class="text-danger" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="password">Password</label>
+                                    @Html.Password("password", "", new { @class = "form-control", @id = "password",@Value= "Admin123", @data_val_required = "الرجاء إدخال كلمة السر " })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    <span class="text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="Languge" for="Languge">Languge</label>
+                                    @Html.DropDownListFor(m => m.SelectedLanguage, Model.Languages, "Choose Language", new { @class = "form-control" })
+                                    @*<input type="text" id="Languge" class="form-control" placeholder="Languge" required>*@
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" value="Login" class="form-control btn btn-primary" />
+                                </div>
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50 text-left">
+                                        <label class="checkbox-wrap checkbox-primary mb-0">
+                                            Remember Me
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            }
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/Content/login-form/js/jquery.min.js"></script>
+    <script src="~/Content/login-form/js/popper.js"></script>
+    <script src="~/Content/login-form/js/bootstrap.min.js"></script>
+    <script src="~/Content/login-form/js/main.js"></script>
+
+</body>
+</html>
+

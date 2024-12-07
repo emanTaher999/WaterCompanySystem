@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetCustmorAR" targetNamespace="http://tempuri.org/DataSetCustmorAR.xsd" xmlns:mstns="http://tempuri.org/DataSetCustmorAR.xsd" xmlns="http://tempuri.org/DataSetCustmorAR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetCustmorAR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetCustmorAR" msprop:Generator_DataSetName="DataSetCustmorAR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Custmor" msprop:Generator_RowEvHandlerName="CustmorRowChangeEventHandler" msprop:Generator_RowDeletedName="CustmorRowDeleted" msprop:Generator_RowDeletingName="CustmorRowDeleting" msprop:Generator_RowEvArgName="CustmorRowChangeEvent" msprop:Generator_TablePropName="Custmor" msprop:Generator_RowChangedName="CustmorRowChanged" msprop:Generator_RowChangingName="CustmorRowChanging" msprop:Generator_TableClassName="CustmorDataTable" msprop:Generator_RowClassName="CustmorRow" msprop:Generator_TableVarName="tableCustmor" msprop:Generator_UserTableName="Custmor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="location" msprop:Generator_ColumnPropNameInRow="location" msprop:Generator_ColumnPropNameInTable="locationColumn" msprop:Generator_ColumnVarNameInTable="columnlocation" msprop:Generator_UserColumnName="location" type="xs:string" minOccurs="0" />
+              <xs:element name="contact_number" msprop:Generator_ColumnPropNameInRow="contact_number" msprop:Generator_ColumnPropNameInTable="contact_numberColumn" msprop:Generator_ColumnVarNameInTable="columncontact_number" msprop:Generator_UserColumnName="contact_number" type="xs:string" minOccurs="0" />
+              <xs:element name="email" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_UserColumnName="email" type="xs:string" minOccurs="0" />
+              <xs:element name="number_of_bottel" msprop:Generator_ColumnPropNameInRow="number_of_bottel" msprop:Generator_ColumnPropNameInTable="number_of_bottelColumn" msprop:Generator_ColumnVarNameInTable="columnnumber_of_bottel" msprop:Generator_UserColumnName="number_of_bottel" type="xs:string" minOccurs="0" />
+              <xs:element name="bottel_type_id" msprop:Generator_ColumnPropNameInRow="bottel_type_id" msprop:Generator_ColumnPropNameInTable="bottel_type_idColumn" msprop:Generator_ColumnVarNameInTable="columnbottel_type_id" msprop:Generator_UserColumnName="bottel_type_id" type="xs:string" minOccurs="0" />
+              <xs:element name="creat_at" msprop:Generator_ColumnPropNameInRow="creat_at" msprop:Generator_ColumnPropNameInTable="creat_atColumn" msprop:Generator_ColumnVarNameInTable="columncreat_at" msprop:Generator_UserColumnName="creat_at" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CustmorKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Custmor" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

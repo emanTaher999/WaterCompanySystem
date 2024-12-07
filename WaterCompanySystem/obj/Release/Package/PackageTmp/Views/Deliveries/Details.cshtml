@@ -1,0 +1,66 @@
+﻿@model WaterCompanySystem.Models.Delivery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Delivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_bottleS_delivered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_bottleS_delivered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creat_at)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creat_at)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custmor.cusmor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custmor.cusmor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryStatu.del_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryStatu.del_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.emp_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.emp_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,100 @@
+﻿@model WaterCompanySystem.Models.Custmor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="title-header">
+    <h4 class="d-flex justify-content-center ">Custmor</h4>
+</div>
+<fieldset class="card shadow mx-auto w-75 p-4">
+    <legend class="bg-custom shadow  px-3">Details</legend>
+
+
+    <div class="row my-2">
+        <div class="col-md-4">
+
+            <div class="alert alert-info">
+                <b>  @Html.Label(WaterCompanySystem.Resourses.Page.cusmor_name)   </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.cusmor_name, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.cusmor_name)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="alert alert-info ">
+                <b> @Html.Label(WaterCompanySystem.Resourses.Page.location_cus)   </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.location_cus, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.location_cus)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+
+            <div class="alert alert-info ">
+                <b> @Html.Label(WaterCompanySystem.Resourses.Page.contact_number)  </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.contact_number, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.contact_number)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-6">
+
+            <div class="alert alert-info ">
+                <b>  @Html.Label(WaterCompanySystem.Resourses.Page.email) </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.email, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.email)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+            <div class="alert alert-info ">
+                <b>  @Html.Label(WaterCompanySystem.Resourses.Page.number_of_bottel) </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.number_of_bottel, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.number_of_bottel)
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row my-2">
+        <div class="col-md-6">
+            <div class="alert alert-info ">
+                <b>  @Html.Label(WaterCompanySystem.Resourses.Page.creat_at) </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.creat_at, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.creat_at)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="alert alert-info ">
+                <b>  @Html.Label(WaterCompanySystem.Resourses.Page.bottle_type) </b>
+                <div class="">
+                    @Html.DisplayFor(model => model.BottleType.bottle_type, new { @class = "form-control", @disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.BottleType.bottle_type)
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</fieldset>
+
+<p class="mt-3 d-flex justify-content-end mx-auto w-75">
+    <a href="/Custmors/Index" class="btn btn-outline-info mx-2">عودة للقائمة</a>
+
+
+</p>

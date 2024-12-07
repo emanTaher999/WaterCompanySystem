@@ -1,0 +1,41 @@
+﻿@model WaterCompanySystem.Models.TransactionType
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.TransactionTypes</h2>
+</div>
+<br />
+<br />
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Edit</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.HiddenFor(model=>model.id)
+
+            <div class="row my-2">
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.Transaction_type)
+                    <div>
+                        @Html.EditorFor(model => model.Transaction_type, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Transaction_type, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div align="center">
+
+                <input type="submit" value="@WaterCompanySystem.Resourses.Page.Edit" id="CreateButton" class="btn btn-primary" />
+
+                <a href="/TransactionTypes/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+            </div>
+        </div>
+    }
+</fieldset>

@@ -1,0 +1,34 @@
+﻿
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@WaterCompanySystem.Resourses.Page.AllEmployeeReport</h3>
+        </div>
+    
+    </div>
+    @*<div class="loading-progress"></div>*@
+    <center>
+        <input id="GenerateReportButton" type="button" value="@WaterCompanySystem.Resourses.Page.ExportReport" onclick="GenerateReport();" class="btn btn-primary btn active" />
+     
+    </center>
+}
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger
+            // Define the function for generating the report
+            function GenerateReport() {
+                // Assuming ShowReport is a function that takes two parameters: URL and report name
+                ShowReport("/Employees/GetEmpDataReport/", "EmployeeRpt2");     
+            }
+            // Attach the function to the button's click event (assuming there's a button for generating the report)
+            $("#GenerateReportButton").click(function () {
+                GenerateReport();
+            });
+        });
+    </script>
+

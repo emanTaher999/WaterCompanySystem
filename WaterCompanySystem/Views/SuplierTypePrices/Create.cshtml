@@ -1,0 +1,57 @@
+﻿@model WaterCompanySystem.Models.SuplierTypePrice
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.SuplierTypePrices</h2>
+</div>
+<br />
+<br />
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.Add</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <div class="row my-2">
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.SuplierTypes)
+                    <div>
+                        @Html.DropDownList("suplier_Type_id", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.suplier_Type_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.nick)
+                    <div>
+                        @Html.EditorFor(model => model.nick, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.nick, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    @Html.Label(@WaterCompanySystem.Resourses.Page.price)
+                    <div>
+                        @Html.EditorFor(model => model.price, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div align="center">
+
+                <input type="submit" value="@WaterCompanySystem.Resourses.Page.Create" id="CreateButton" class="btn btn-primary" />
+
+                <a href="/SuplierTypePrices/Index" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+            </div>
+        </div>
+    }
+</fieldset>

@@ -1,0 +1,167 @@
+﻿
+@model WaterCompanySystem.Models.Warehouse
+@{
+    ViewBag.Title = "DisplayStore";
+}
+
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.DisplayAmount</h2>
+
+</div>
+<br />
+
+
+<fieldset class="card p-4 shadow">
+    <legend class="bg-custom shadow  px-3">@WaterCompanySystem.Resourses.Page.View</legend>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+ 
+    <div class="row my-2">
+        <div class="col-md-3">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.date)
+
+            <div>
+                @Html.TextBox("Search_date", "", new { @class = "form-control", @type = "date", @id = "Search_date" })
+
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-3">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.Expence_Rev_Amount)
+            <div>
+                @Html.TextBox("Expence_Rev_Amount", "", new { @class = "form-control", id = "Expence_Rev_Amount" })
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.Expence_Dis_Amount)
+            <div>
+                @Html.TextBox("Expence_Dis_Amount", "", new { @class = "form-control", id = "Expence_Dis_Amount" })
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.Income_Amount)
+            <div>
+                @Html.TextBox("Income_Amount", "", new { @class = "form-control", id = "Income_Amount" })
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            @Html.Label(@WaterCompanySystem.Resourses.Page.NetAmount)
+            <div>
+                @Html.TextBox("NetAmount", "", new { @class = "form-control", id = "NetAmount" })
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <div align="center">
+
+        <a href="/Warehouses/ReportParameterAmount" class="btn btn-primary">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+
+        <a href="/Warehouses/Index3" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.BacktoList</a>
+    </div>
+</div>
+
+    }
+</fieldset>
+
+
+<script>
+        $(document).ready(function () {
+    // Function to initialize or update the Chart.js chart
+            function initializeChart(storequantity) {
+        var ctx = document.getElementById('myChart');
+
+        if (!ctx) {
+            console.error('Canvas element with id "myChart" not found.');
+            return;
+        }
+
+        ctx = ctx.getContext('2d'); // Get the 2D context
+
+        if (window.myChart instanceof Chart) {
+            window.myChart.destroy(); // Destroy existing chart instance to avoid duplication
+        }
+
+        // Check if price is a valid number
+                if (isNaN(Expence_Dis_Amount)) {
+                    console.error('Invalid Expence_Dis_Amount value:', Expence_Dis_Amount);
+            return;
+        }
+
+        window.myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Expence_Dis_Amount'],
+                datasets: [{
+                    label: 'Expence_Dis_Amount Value',
+                    data: [Expence_Dis_Amount],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        }
+
+            //GetAmountTotal
+            $('#Search_date').on('change', function () {
+        var Search_date = $(this).val();
+
+        if (Search_date) {
+            $.ajax({
+                url: '@Url.Action("GetAmountTotal", "Warehouses")',
+                type: 'GET',
+                data: { Search_date: Search_date },
+                success: function (response) {
+                    if (response.Expence_Rev_Amount !== null) {
+                        $('#Expence_Dis_Amount').val(response.Expence_Dis_Amount);
+                        initializeChart(response.Expence_Dis_Amount);
+                        $('#Expence_Rev_Amount').val(response.Expence_Rev_Amount);
+                        initializeChart(response.Expence_Rev_Amount);
+                        $('#Income_Amount').val(response.Income_Amount);
+                        initializeChart(response.Income_Amount);
+                        $('#NetAmount').val(response.NetAmount);
+                        initializeChart(response.NetAmount);
+
+                    } else {
+                        $('#Expence_Dis_Amount').val('');
+                        alert('Expence_Dis_Amount not found for the selected supplier type.');
+                        $('#Expence_Rev_Amount').val('');
+                        alert('Expence_Rev_Amount not found for the selected supplier type.');
+                        $('#Income_Amount').val('');
+                        alert('Income_Amount not found for the selected supplier type.');
+                        $('#NetAmount').val('');
+                        alert('NetAmount not found for the selected supplier type.');
+                    }
+                },
+                error: function () {
+                    alert('Error fetching StoreQuantity. Please try again.');
+                }
+            });
+        } else {
+            $('#Expence_Dis_Amount').val('');
+            $('#Expence_Rev_Amount').val('');
+            $('#Income_Amount').val('');
+            $('#NetAmount').val('');
+        }
+    });
+});
+</script>

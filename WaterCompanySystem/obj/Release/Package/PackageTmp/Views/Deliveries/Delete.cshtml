@@ -1,0 +1,72 @@
+﻿@model WaterCompanySystem.Models.Delivery
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Delivery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.delivery_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.delivery_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_bottleS_delivered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_bottleS_delivered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creat_at)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creat_at)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Custmor.cusmor_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Custmor.cusmor_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryStatu.del_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryStatu.del_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.emp_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.emp_name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@model WaterCompanySystem.Models.RoleTable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.Roles</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Roles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

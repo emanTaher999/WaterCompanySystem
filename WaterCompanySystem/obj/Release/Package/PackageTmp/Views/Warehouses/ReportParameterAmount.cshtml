@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "ReportParameterAmount";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.AmountReportDate</h2>
+
+
+<div class="row my-2">
+    <div class="col-md-3">
+        @Html.Label(@WaterCompanySystem.Resourses.Page.date)
+
+        <div>
+            @Html.TextBox("Search_date", "", new { @class = "form-control", @type = "date", @id = "Search_date" })
+
+        </div>
+    </div>
+</div>
+<center>
+    <input id="GenerateReportButton" type="button" value="@WaterCompanySystem.Resourses.Page.ExportReport" class="btn btn-primary" />
+</center>
+<hr />
+
+<iframe id="custmerRpt" style="width: 100%; height: 600px;" frameborder="0" scrolling="yes">
+</iframe>
+
+<script>
+
+            $("#GenerateReportButton").click(function () {
+      debugger
+                var Search_date = $('#Search_date').val(); // Fetch value from dropdown
+
+                if (Search_date) {
+                $.ajax({
+                    url: '@Url.Action("GetStoreInfoBySearch_dateReport", "Warehouses")',
+                    type: 'GET',
+                    data: { Search_date: Search_date },
+                    success: function (response) {
+                        if (response !== undefined) {
+                            var reportUrl = '@Url.Action("GetStoreInfoBySearch_dateReport", "Warehouses")' + '?Search_date=' + Search_date;
+
+                    // Open report in a new tab/window
+                    window.open(reportUrl, '_blank');
+                            @*window.open('@Url.Action("GetStoreInfoBySyplierDataReport", "Warehouses")', '_blank');*@
+                        } else {
+                            alert(' not found for the selected supplier type.');
+                        }
+                    },
+                    error: function () {
+                        alert('Error fetching StoreQuantity. Please try again.');
+                    }
+                });
+            } else {
+                alert('Please select a supplier type.');
+            }
+        });
+
+</script>

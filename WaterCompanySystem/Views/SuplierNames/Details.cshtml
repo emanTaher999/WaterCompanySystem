@@ -1,0 +1,58 @@
+﻿@model WaterCompanySystem.Models.SuplierName
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.SuplierNames</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.suplier_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.suplier_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.location_cus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location_cus)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.contact_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contact_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fax)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.Edit, "Edit", new { id = Model.id }) |
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.BacktoList, "Index")
+</p>

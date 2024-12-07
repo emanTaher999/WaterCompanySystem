@@ -1,0 +1,42 @@
+﻿@model WaterCompanySystem.Models.SuplierTypePrice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.Details</h2>
+
+<div>
+    <h4>@WaterCompanySystem.Resourses.Page.SuplierTypePrices</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.nick)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nick)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@WaterCompanySystem.Resourses.Page.SuplierTypes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuplierType.suplier_type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.Edit, "Edit", new { id = Model.id }) |
+    @Html.ActionLink(@WaterCompanySystem.Resourses.Page.BacktoList, "Index")
+</p>

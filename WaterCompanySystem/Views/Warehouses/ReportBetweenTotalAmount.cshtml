@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "ReportBetweenTotalAmount";
+}
+
+<h2>@WaterCompanySystem.Resourses.Page.AmountReportTowDate</h2>
+
+
+<div class="row my-2">
+    <div class="col-md-3">
+        @Html.Label(@WaterCompanySystem.Resourses.Page.Start_date)
+
+        <div>
+            @Html.TextBox("Start_Date", "", new { @class = "form-control", @type = "date", @id = "Start_Date" })
+
+        </div>
+    </div>
+    <div class="col-md-3">
+        @Html.Label(@WaterCompanySystem.Resourses.Page.End_Date)
+
+        <div>
+            @Html.TextBox("End_Date", "", new { @class = "form-control", @type = "date", @id = "End_Date" })
+
+        </div>
+    </div>
+</div>
+
+<button value="@WaterCompanySystem.Resourses.Page.ExportReport" id="GenerateReportButton" class="btn btn-primary">@WaterCompanySystem.Resourses.Page.ExportReport</button>
+
+
+<hr />
+
+<script>
+    debugger
+
+
+    $('#GenerateReportButton').on('click', function () {
+
+        // Get the selected start and end dates
+        var startDate = $('#Start_Date').val();
+        var endDate = $('#End_Date').val();
+
+        // Ensure dates are formatted correctly as 'yyyy-MM-dd'
+        if (startDate && endDate) {
+            $.ajax({
+                url: '@Url.Action("GetStoreInfoByTowSearch_dateReport", "Warehouses")', // Action URL
+                type: 'GET',
+                data: { startDate1: startDate, endDate1: endDate }, // Pass dates as query parameters
+                success: function (response) {
+                    if (response) {
+                        // Open the report in a new tab
+                        window.open('@Url.Action("GetStoreInfoByTowSearch_dateReport", "Warehouses")?startDate1=' + startDate + '&endDate1=' + endDate, '_blank');
+                    } else {
+                        alert('No report available for the selected dates.');
+                    }
+                },
+                error: function () {
+                    alert('Error fetching the report. Please try again.');
+                }
+            });
+        } else {
+            alert('Please select both start and end dates.');
+        }
+    });
+
+
+
+
+</script>

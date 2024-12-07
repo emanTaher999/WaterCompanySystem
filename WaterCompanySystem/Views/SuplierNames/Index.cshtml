@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.SuplierName>
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}@if
+  (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.SuplierNames</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index", "SuplierNames", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+
+    <a href="/SuplierNames/Create" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.Create</a>
+
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+
+           
+                <tr>
+                    <th>
+                        @Html.DisplayName(@WaterCompanySystem.Resourses.Page.SuplierNames)
+                    </th>
+                    <th>
+                        @Html.DisplayName(@WaterCompanySystem.Resourses.Page.location_cus)
+                    </th>
+                    <th>
+                        @Html.DisplayName(@WaterCompanySystem.Resourses.Page.contact_number)
+                    </th>
+                    <th>
+                        @Html.DisplayName(@WaterCompanySystem.Resourses.Page.email)
+                    </th>
+                    <th>
+                        @Html.DisplayName(@WaterCompanySystem.Resourses.Page.fax)
+                    </th>
+                    <th>
+                        @WaterCompanySystem.Resourses.Page.Control
+                    </th>
+                </tr>
+        </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.suplier_name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.location_cus)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.contact_number)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fax)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+    </table>
+ </div>

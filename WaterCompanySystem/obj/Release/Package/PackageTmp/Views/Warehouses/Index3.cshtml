@@ -1,0 +1,89 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Warehouse>
+
+@{
+    ViewBag.Title = "Index3";
+}
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Warehouses</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index", "Warehouses", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Warehouses/Create" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+  
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.suplier_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.quantity) <!-- Use FirstOrDefault to access DisplayName -->
+                </th>
+                <th>
+                    Control
+                </th>
+            </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SuplierType.suplier_type) <!-- Null check for SuplierType -->
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.quantity)
+                    </td>
+                    <td>
+                        <a href="/Warehouses/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i></a>
+                        |
+                        <a href="/Warehouses/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                        @*|
+                        <a href="/Warehouses/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>*@
+                    </td>
+                </tr>
+            }
+    </table>
+    </div>

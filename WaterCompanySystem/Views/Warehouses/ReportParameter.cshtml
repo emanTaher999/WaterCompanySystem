@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "ReportParameter";
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.AllSuplierStoreReportWithType</h2>
+
+</div>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.Label(@WaterCompanySystem.Resourses.Page.suplier_name)
+        <div>
+            @Html.DropDownList("suplier_type_id", ViewBag.suplier_type_id as SelectList, "......... Select ............", new { @class = "form-control", id = "suplier_type_id" })
+        </div>
+    </div>
+
+</div>
+<hr />
+
+<iframe id="custmerRpt" style="width: 100%; height: 600px;" frameborder="0" scrolling="yes">
+</iframe>
+
+<script>
+
+
+$(document).ready(function () {
+$('#suplier_type_id').on('change', function () {
+debugger
+var suplierTypeId = $(this).val(); // Get the selected supplier type ID
+
+if (suplierTypeId) {
+    $.ajax({
+        url: '@Url.Action("GetStoreReport", "Warehouses")', // Call the action without directly embedding the ID in the URL
+        type: 'GET',
+        data: { supl_id: suplierTypeId }, // Pass suplierTypeId as a query parameter
+        success: function (response) {
+        if (response !== null) {
+      //  alert('good');
+        // Optionally, open the PDF in a new tab if needed
+        window.open('@Url.Action("GetStoreReport", "Warehouses")?supl_id=' + suplierTypeId, '_blank');
+        } else {
+            alert('Please select a supplier type.');
+        } },
+        error: function () {
+        alert('Error fetching StoreQuantity. Please try again.'); } });
+        } else {
+        alert('Please select a supplier type.');
+        }
+        });
+        });
+
+</script>

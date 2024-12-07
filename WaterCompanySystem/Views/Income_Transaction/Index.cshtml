@@ -1,0 +1,128 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Income_Transaction>
+
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.IncomeTransaction</h2>
+</div>
+<br />
+<br />
+@using (Html.BeginForm("Index", "Income_Transaction", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Income_Transaction/Create" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.transaction_date)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.cusmor_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.amount)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.quantity)
+                </th>
+
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.PaymentType)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.nick)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.Transaction_type)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.note)
+                </th>
+                <th>
+                    Control
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+             
+            <td>
+                @*@item.transaction_date.Value.ToString("dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture)*@
+
+                @(item.transaction_date.HasValue ? item.transaction_date.Value.ToString("dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) : "No Date")
+                @*@Html.DisplayFor(modelItem => item.transaction_date)*@
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Custmor.cusmor_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payment_Type.payment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SuplierTypePrice.nick)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TransactionType.Transaction_type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note)
+                </td>
+                <td>
+                    <a href="/Income_Transaction/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i></a>
+                    |
+                    <a href="/Income_Transaction/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                    |
+                    <a href="/Income_Transaction/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

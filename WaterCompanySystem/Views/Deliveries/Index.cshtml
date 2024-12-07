@@ -1,0 +1,110 @@
+﻿@model IEnumerable<WaterCompanySystem.Models.Delivery>
+@if (TempData["AlertMessage"] == "success")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}
+@if (TempData["AlertMessage"] == "edit")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تمت الاضافة بنجاح',
+            'success'
+        )
+    </script>
+}@if (TempData["AlertMessage"] == "deleted")
+{
+    <script src="~/Content/cdnjs/sweetalert2.all.min.js"></script>
+    <script type="text/javascript">
+        Swal.fire(
+            'نجحت العملية',
+            'تم الحذف بنجاح',
+            'error'
+        )
+    </script>
+}
+
+<div class="title-header">
+    <h2 class="d-flex justify-content-center "><i class="mx-2 my-auto fa fa-hand-holding-water"></i>@WaterCompanySystem.Resourses.Page.Deliveries</h2>
+</div>
+<br />
+<br />
+
+@using (Html.BeginForm("Index", "Employees", FormMethod.Get))
+{
+    <div style="margin-bottom:20px" align="center">
+        <input type="text" name="search" placeholder="Search" class="form-control" style="width: 300px; margin-bottom: 10px" />
+        <input type="submit" name="submit" value="Search" class="btn btn-outline-primary" />
+    </div>
+    <a href="/Deliveries/Create" class="btn btn-facebook">@WaterCompanySystem.Resourses.Page.CreateNew</a>
+    <a href="/Deliveries/DeliveriesReport" target="_blank" class="btn btn-dark justify-content-end">@WaterCompanySystem.Resourses.Page.ExportReport</a>
+}
+
+<div class="table-responsive">
+    <table class="table table-border table-hover" id="sortedtable">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.delivery_date)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.num_bottleS_delivered)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.creat_at)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.cusmor_name)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.del_status)
+                </th>
+                <th>
+                    @Html.DisplayName(@WaterCompanySystem.Resourses.Page.emp_name)
+                </th>
+                <th>
+                    Control
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.delivery_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.num_bottleS_delivered)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.creat_at)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Custmor.cusmor_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryStatu.del_status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Employee.emp_name)
+                    </td>
+                    <td>
+                        <a href="/Deliveries/Edit/@item.id" class="btn btn-outline-success"><i class="fa fa-pencil-alt"></i>   </a>
+                        |
+                        <a href="/Deliveries/Details/@item.id" class="btn btn-outline-info"><i class="fa fa-list"></i></a>
+                        |
+                        <a href="/Deliveries/Delete/@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            }
+
+    </table>
+    </div>
